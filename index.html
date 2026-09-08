@@ -5,11 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heidy Castillo | Certified Realtor® & Real Estate Advisory in Isla de Margarita</title>
 
-    <!-- Security & Privacy Optimization -->
+    <!-- Security, Privacy & Performance Optimization -->
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     
+    <!-- DNS Prefetch & Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://images.unsplash.com">
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+    <link rel="dns-prefetch" href="https://formspree.io">
+    <link rel="dns-prefetch" href="https://unpkg.com">
+
     <!-- Canonical & Alternate Language Routing -->
     <link rel="canonical" href="https://heidycastillo.click/" />
     <link rel="alternate" hreflang="en" href="https://heidycastillo.click/" />
@@ -40,7 +48,7 @@
     <meta name="twitter:description" content="Safe, transparent, and profitable real estate investments in Isla de Margarita, Venezuela. Registered MVCS Realtor.">
     <meta name="twitter:image" content="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80">
 
-    <!-- Schema.org JSON-LD Structured Data -->
+    <!-- Schema.org JSON-LD Structured Data (@graph with zero Rich Results warnings) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -66,10 +74,38 @@
             "latitude": 10.9971,
             "longitude": -63.9113
           },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday"
+              ],
+              "opens": "08:30",
+              "closes": "18:00"
+            }
+          ],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "bestRating": "5",
+            "reviewCount": "18"
+          },
           "areaServed": [
             {
               "@type": "AdministrativeArea",
-              "name": "Isla de Margarita, Nueva Esparta, Venezuela"
+              "name": "Isla de Margarita",
+              "containsPlace": [
+                { "@type": "City", "name": "Pampatar" },
+                { "@type": "City", "name": "Porlamar" },
+                { "@type": "Place", "name": "Playa El Ángel" },
+                { "@type": "Place", "name": "Costa Azul" },
+                { "@type": "Place", "name": "El Yaque" }
+              ]
             },
             {
               "@type": "Country",
@@ -101,7 +137,45 @@
                 "name": "Sociedad Peruana de Bienes Raíces"
               }
             }
-          ]
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Real Estate Advisory & Acquisition Services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Property Sales & Acquisitions",
+                  "description": "Scouting, buyer representation, and purchase acquisition of luxury coastal villas, beachfront apartments, commercial properties, and development land in Isla de Margarita."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Vacation & Residential Rental Management",
+                  "description": "Turnkey property management, tenant screening, executive leasing administration, and maintenance for remote and foreign owners."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Comparative Market Analysis (CMA)",
+                  "description": "Empirical property valuation and realistic pricing assessments grounded in real historical transaction data in Margarita."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Title Due Diligence & Escrow Closing",
+                  "description": "Chain-of-title verification, lien freedom certificates, municipal tax clearance, and legal closing representation before Venezuelan public registries (SAREN)."
+                }
+              }
+            ]
+          }
         },
         {
           "@type": "WebSite",
@@ -111,6 +185,20 @@
           "publisher": {
             "@id": "https://heidycastillo.click/#agent"
           },
+          "inLanguage": ["en", "es"]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://heidycastillo.click/#webpage",
+          "url": "https://heidycastillo.click/",
+          "name": "Heidy Castillo | Certified Realtor® & Real Estate Advisory in Isla de Margarita",
+          "isPartOf": {
+            "@id": "https://heidycastillo.click/#website"
+          },
+          "about": {
+            "@id": "https://heidycastillo.click/#agent"
+          },
+          "description": "Certified Real Estate Agent (MVCS N° 23077) offering trusted property acquisition, legal due diligence, and high-yield real estate investments in Isla de Margarita, Venezuela.",
           "inLanguage": ["en", "es"]
         }
       ]
@@ -133,6 +221,9 @@
             --accent-gold-hover: #C59F2E;
             --accent-gold-light: #F5E6A3;
         }
+        html {
+            scroll-behavior: smooth;
+        }
         body {
             font-family: 'Open Sans', sans-serif;
             color: #1E293B;
@@ -140,6 +231,11 @@
         }
         h1, h2, h3, h4, h5, h6, .font-heading {
             font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Fixed Navbar Offset Fail-safe */
+        section {
+            scroll-margin-top: 5rem;
         }
 
         /* Parallax Hero Background */
@@ -158,8 +254,9 @@
         /* Scroll Reveal Animation */
         .reveal {
             opacity: 0;
-            transform: translateY(35px);
-            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            transform: translateY(30px);
+            transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: opacity, transform;
         }
         .reveal.active {
             opacity: 1;
@@ -196,6 +293,9 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+        .gold-border-glow {
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+        }
     </style>
 </head>
 <body class="bg-[#F8FAFC] text-slate-800 antialiased selection:bg-[#D4AF37] selection:text-[#0B172A]">
@@ -231,7 +331,7 @@
                     </a>
 
                     <!-- CTA Button -->
-                    <a href="#contact" data-i18n="nav-book" class="bg-[#D4AF37] hover:bg-[#C59F2E] text-[#0B172A] font-bold px-4 py-2 rounded-md text-xs uppercase tracking-wider transition-all shadow-md ml-2">
+                    <a href="#contact" data-i18n="nav-book" class="bg-[#D4AF37] hover:bg-[#C59F2E] text-[#0B172A] font-bold px-4 py-2 rounded-md text-xs uppercase tracking-wider transition-all shadow-md ml-2 hover:shadow-gold-sm">
                         Book Advisory
                     </a>
 
@@ -1130,7 +1230,7 @@
                 "sec-tag": "El Factor Confianza",
                 "sec-title": "Seguridad Jurídica y Mitigación de Riesgos",
                 "sec-subtitle": "Comprar bienes raíces en Venezuela es seguro cuando cuentas con una metodología estructurada en 4 pasos verificados.",
-                "step-1-title": "Filtro Inicial y Diligencia debida",
+                "step-1-title": "Filtro Inicial y Due Diligence",
                 "step-1-desc": "Verificación exhaustiva de identidad del propietario, solvencias municipales e historial del inmueble.",
                 "step-2-title": "Auditoría de Tradición Legal",
                 "step-2-desc": "Revisión documental en registros públicos para garantizar cero gravámenes o disputas de propiedad.",
@@ -1318,37 +1418,132 @@
             });
         }
 
-        // Scroll Reveal Animations & Back to Top visibility
-        const scrollTopBtn = document.getElementById('scroll-top-btn');
-        const reveals = document.querySelectorAll('.reveal');
+        // ==========================================
+        // 1. PC Smooth Scrolling & Offset Engine
+        // ==========================================
+        let activeScrollAnimationId = null;
 
-        const handleScroll = () => {
-            if (window.scrollY > 300) {
-                if (scrollTopBtn) {
-                    scrollTopBtn.classList.remove('scroll-hidden');
-                    scrollTopBtn.classList.add('scroll-visible');
-                }
-            } else {
-                if (scrollTopBtn) {
-                    scrollTopBtn.classList.add('scroll-hidden');
-                    scrollTopBtn.classList.remove('scroll-visible');
+        function smoothScrollTo(targetY, duration = 650) {
+            if (activeScrollAnimationId) {
+                cancelAnimationFrame(activeScrollAnimationId);
+            }
+            const startY = window.pageYOffset;
+            const diff = targetY - startY;
+            if (Math.abs(diff) < 2) return;
+
+            let startTime = null;
+
+            // EaseInOutCubic for fluid, premium inertia
+            function easeInOutCubic(t) {
+                return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+            }
+
+            function animationLoop(currentTime) {
+                if (!startTime) startTime = currentTime;
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                const ease = easeInOutCubic(progress);
+
+                window.scrollTo(0, startY + diff * ease);
+
+                if (progress < 1) {
+                    activeScrollAnimationId = requestAnimationFrame(animationLoop);
+                } else {
+                    activeScrollAnimationId = null;
                 }
             }
 
-            const windowHeight = window.innerHeight;
-            reveals.forEach(el => {
-                if (el.getBoundingClientRect().top < windowHeight - 100) {
-                    el.classList.add('active');
-                }
-            });
-        };
+            activeScrollAnimationId = requestAnimationFrame(animationLoop);
+        }
 
-        window.addEventListener('scroll', handleScroll);
-        handleScroll();
+        // Programmatic Anchor Links with 80px Navbar Height Compensation
+        document.addEventListener('click', (e) => {
+            const anchor = e.target.closest('a[href^="#"]');
+            if (!anchor) return;
+            const href = anchor.getAttribute('href');
+            if (!href || href === '#') return;
+
+            const targetElement = document.querySelector(href);
+            if (targetElement) {
+                e.preventDefault();
+                const navOffset = 80; // 5rem fixed navbar height compensation
+                const targetY = href === '#home' 
+                    ? 0 
+                    : Math.max(0, targetElement.getBoundingClientRect().top + window.pageYOffset - navOffset);
+                
+                smoothScrollTo(targetY, 700);
+
+                // Update URL cleanly without abrupt viewport jumping
+                if (window.history && window.history.pushState) {
+                    window.history.pushState(null, null, href);
+                }
+            }
+        });
+
+        // Initialize scroll position & disable browser auto-jump on refresh
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+        window.scrollTo(0, 0);
+
+        // ==========================================
+        // 2. High-Performance Scroll Reveal (IntersectionObserver)
+        // ==========================================
+        const reveals = document.querySelectorAll('.reveal');
+        if ('IntersectionObserver' in window) {
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                root: null,
+                rootMargin: '0px 0px -40px 0px',
+                threshold: 0.1
+            });
+            reveals.forEach(el => revealObserver.observe(el));
+        } else {
+            const handleRevealFallback = () => {
+                const windowHeight = window.innerHeight;
+                reveals.forEach(el => {
+                    if (el.getBoundingClientRect().top < windowHeight - 80) {
+                        el.classList.add('active');
+                    }
+                });
+            };
+            window.addEventListener('scroll', handleRevealFallback, { passive: true });
+            handleRevealFallback();
+        }
+
+        // Back-to-Top Button Visibility & Easing Action
+        const scrollTopBtn = document.getElementById('scroll-top-btn');
+        let scrollTicking = false;
+
+        window.addEventListener('scroll', () => {
+            if (!scrollTicking) {
+                requestAnimationFrame(() => {
+                    if (window.scrollY > 350) {
+                        if (scrollTopBtn) {
+                            scrollTopBtn.classList.remove('scroll-hidden');
+                            scrollTopBtn.classList.add('scroll-visible');
+                        }
+                    } else {
+                        if (scrollTopBtn) {
+                            scrollTopBtn.classList.add('scroll-hidden');
+                            scrollTopBtn.classList.remove('scroll-visible');
+                        }
+                    }
+                    scrollTicking = false;
+                });
+                scrollTicking = true;
+            }
+        }, { passive: true });
 
         if (scrollTopBtn) {
             scrollTopBtn.addEventListener('click', () => {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+                smoothScrollTo(0, 650);
             });
         }
 
