@@ -145,9 +145,17 @@
               {
                 "@type": "Offer",
                 "itemOffered": {
-                  "@type": "Service",
-                  "name": "Compra y Venta de Inmuebles",
-                  "description": "Búsqueda personalizada, representación de compradores y adquisición de apartamentos de lujo, villas frente al mar, locales comerciales y terrenos en Isla de Margarita."
+                  "@type": "Apartment",
+                  "name": "Exclusivo Apartamento con Vista al Mar en Costa Azul",
+                  "description": "Exclusivo apartamento de 105 m² en Urbanización Dumar, Costa Azul, Isla de Margarita. 2 habitaciones principales con baño privado, baño de visitas, 2 puestos techados, piscina y vigilancia 24/7.",
+                  "price": "108000",
+                  "priceCurrency": "USD",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Costa Azul, Isla de Margarita",
+                    "addressRegion": "Nueva Esparta",
+                    "addressCountry": "VE"
+                  }
                 }
               },
               {
@@ -473,7 +481,8 @@
     </section>
 
     <!-- 3. About & Credentials Section -->
-        <section id="about" class="py-24 bg-white reveal">
+            <!-- 3. About & Credentials Section -->
+    <section id="about" class="py-24 bg-white reveal">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <span class="text-xs font-bold uppercase tracking-widest text-[#D4AF37]" data-i18n="about-tag">Perfil Profesional</span>
@@ -482,49 +491,59 @@
             </div>
 
             <div class="grid lg:grid-cols-12 gap-12 items-center">
-                <!-- Left Column: Credentials Card with Heidy About Photo -->
+                <!-- Left Column: Commanding Large Portrait Frame + Integrated Credentials Card -->
                 <div class="lg:col-span-5">
-                    <div class="bg-gradient-to-b from-[#0B172A] to-[#0F223D] p-6 sm:p-8 rounded-2xl text-white shadow-2xl border border-[#D4AF37]/30 relative overflow-hidden">
-                        <div class="absolute -right-10 -bottom-10 w-44 h-44 rounded-full bg-[#D4AF37]/10 pointer-events-none"></div>
-                        
-                        <!-- Header with Heidy About Photo -->
-                        <div class="flex items-center gap-5 mb-6">
-                            <div class="relative w-20 h-20 rounded-2xl overflow-hidden border-2 border-[#D4AF37] shadow-lg shrink-0 aspect-square">
-                                <img src="photos/heidy-about.webp" 
-                                     alt="Heidy Castillo - Agente Inmobiliaria Certificada" 
-                                     width="300" 
-                                     height="300" 
-                                     loading="lazy" 
-                                     decoding="async" 
-                                     class="w-full h-full object-cover object-top">
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold font-heading text-white">Heidy Castillo</h3>
-                                <p class="text-xs text-[#D4AF37] font-semibold tracking-wider uppercase">Certified Realtor®</p>
-                                <p class="text-[11px] text-slate-400 mt-0.5">Asesoría Inmobiliaria Integral</p>
+                    <div class="bg-gradient-to-b from-[#0B172A] to-[#0F223D] rounded-3xl overflow-hidden shadow-2xl border border-[#D4AF37]/40 relative group">
+                        <!-- Prominent Luxury Portrait Frame -->
+                        <div class="relative w-full aspect-[4/5] sm:h-[440px] lg:h-[480px] overflow-hidden bg-[#0F223D]">
+                            <img src="photos/heidy-about.webp" 
+                                 alt="Heidy Castillo - Agente Inmobiliaria Certificada" 
+                                 width="600" 
+                                 height="750" 
+                                 loading="lazy" 
+                                 decoding="async" 
+                                 class="w-full h-full object-cover object-top group-hover:scale-103 transition-transform duration-700">
+                            
+                            <!-- Ambient Bottom Gradient -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#0B172A] via-[#0B172A]/20 to-transparent"></div>
+                            
+                            <!-- Overlay Identity Badge -->
+                            <div class="absolute bottom-4 left-5 right-5">
+                                <span class="inline-flex items-center gap-1 text-[10px] font-bold text-[#D4AF37] bg-[#0B172A]/90 backdrop-blur-md px-3 py-1 rounded-full border border-[#D4AF37]/40 uppercase tracking-widest mb-1.5">
+                                    Certified Realtor®
+                                </span>
+                                <h3 class="text-2xl font-bold font-heading text-white tracking-wide">Heidy Castillo</h3>
+                                <p class="text-xs text-slate-300">Asesoría Inmobiliaria Integral • Isla de Margarita</p>
                             </div>
                         </div>
 
-                        <div class="space-y-4 text-sm text-slate-300 border-t border-white/10 pt-6">
-                            <div class="flex items-start gap-3">
-                                <i data-lucide="check-circle" class="w-5 h-5 text-[#D4AF37] shrink-0 mt-0.5"></i>
+                        <!-- Seamlessly Attached Credential Details -->
+                        <div class="p-6 sm:p-7 space-y-4 border-t border-[#D4AF37]/30 bg-[#0B172A]/95">
+                            <div class="flex items-start gap-3.5">
+                                <div class="w-9 h-9 rounded-xl bg-[#D4AF37]/15 flex items-center justify-center text-[#D4AF37] shrink-0 border border-[#D4AF37]/30 mt-0.5">
+                                    <i data-lucide="shield-check" class="w-5 h-5"></i>
+                                </div>
                                 <div>
-                                    <p class="font-bold text-white" data-i18n="cred-mvcs-title">Registro MVCS N° 23077-PN-MVCS</p>
-                                    <p class="text-xs text-slate-400" data-i18n="cred-mvcs-desc">Inscrita oficialmente en el Registro Nacional de Agentes Inmobiliarios del Ministerio de Vivienda, Construcción y Saneamiento.</p>
+                                    <p class="font-bold text-white text-sm" data-i18n="cred-mvcs-title">Registro MVCS N° 23077-PN-MVCS</p>
+                                    <p class="text-xs text-slate-400 mt-0.5 leading-relaxed" data-i18n="cred-mvcs-desc">Inscrita oficialmente en el Registro Nacional de Agentes Inmobiliarios del Ministerio de Vivienda, Construcción y Saneamiento.</p>
                                 </div>
                             </div>
-                            <div class="flex items-start gap-3">
-                                <i data-lucide="check-circle" class="w-5 h-5 text-[#D4AF37] shrink-0 mt-0.5"></i>
+                            <div class="flex items-start gap-3.5">
+                                <div class="w-9 h-9 rounded-xl bg-[#D4AF37]/15 flex items-center justify-center text-[#D4AF37] shrink-0 border border-[#D4AF37]/30 mt-0.5">
+                                    <i data-lucide="award" class="w-5 h-5"></i>
+                                </div>
                                 <div>
-                                    <p class="font-bold text-white" data-i18n="cred-soc-title">Sociedad Peruana de Bienes Raíces</p>
-                                    <p class="text-xs text-slate-400" data-i18n="cred-soc-desc">Agente inmobiliario certificado con especialización técnica en derecho inmobiliario y tasación.</p>
+                                    <p class="font-bold text-white text-sm" data-i18n="cred-soc-title">Sociedad Peruana de Bienes Raíces</p>
+                                    <p class="text-xs text-slate-400 mt-0.5 leading-relaxed" data-i18n="cred-soc-desc">Agente inmobiliario certificado con especialización técnica en derecho inmobiliario y tasación.</p>
                                 </div>
                             </div>
-                            <div class="flex items-start gap-3">
-                                <i data-lucide="check-circle" class="w-5 h-5 text-[#D4AF37] shrink-0 mt-0.5"></i>
+                            <div class="flex items-start gap-3.5">
+                                <div class="w-9 h-9 rounded-xl bg-[#D4AF37]/15 flex items-center justify-center text-[#D4AF37] shrink-0 border border-[#D4AF37]/30 mt-0.5">
+                                    <i data-lucide="check-circle" class="w-5 h-5"></i>
+                                </div>
                                 <div>
-                                    <p class="font-bold text-white" data-i18n="cred-exp-title">+4 Años de Experiencia en el Mercado</p>
-                                    <p class="text-xs text-slate-400" data-i18n="cred-exp-desc">Gestión transaccional integral, auditoría de títulos e inversiones de alto rendimiento en Margarita.</p>
+                                    <p class="font-bold text-white text-sm" data-i18n="cred-exp-title">+4 Años de Experiencia en el Mercado</p>
+                                    <p class="text-xs text-slate-400 mt-0.5 leading-relaxed" data-i18n="cred-exp-desc">Gestión transaccional integral, auditoría de títulos e inversiones de alto rendimiento en Margarita.</p>
                                 </div>
                             </div>
                         </div>
@@ -533,13 +552,13 @@
 
                 <!-- Right Column: Narrative & Stats -->
                 <div class="lg:col-span-7 space-y-6">
-                    <h3 class="text-2xl font-bold text-[#0B172A] font-heading" data-i18n="about-narrative-title">
+                    <h3 class="text-2xl sm:text-3xl font-bold text-[#0B172A] font-heading leading-tight" data-i18n="about-narrative-title">
                         Tus ojos, escudo legal y guía estratégica en el mercado inmobiliario de Margarita
                     </h3>
-                    <p class="text-slate-600 leading-relaxed" data-i18n="about-p1">
+                    <p class="text-slate-600 leading-relaxed text-sm sm:text-base" data-i18n="about-p1">
                         Invertir en bienes raíces en Venezuela requiere mucho más que mirar anuncios: exige una debida diligencia minuciosa, verificación de tradición legal de títulos y conocimiento real del terreno.
                     </p>
-                    <p class="text-slate-600 leading-relaxed" data-i18n="about-p2">
+                    <p class="text-slate-600 leading-relaxed text-sm sm:text-base" data-i18n="about-p2">
                         Con más de 4 años de experiencia y acreditación oficial de la Sociedad Peruana de Bienes Raíces y el MVCS (Licencia N° 23077-PN-MVCS), Heidy Castillo asesora a inversores extranjeros, jubilados y venezolanos en el exterior garantizando operaciones 100% transparentes y seguras.
                     </p>
 
@@ -682,212 +701,198 @@
     </section>
 
     <!-- 6. Featured Properties Portfolio -->
-        <section id="portfolio" class="py-24 bg-white reveal">
+            <!-- 6. Featured Properties Portfolio (Sole Real Listing Showcase) -->
+    <section id="portfolio" class="py-24 bg-white reveal">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <span class="text-xs font-bold uppercase tracking-widest text-[#D4AF37]" data-i18n="portfolio-tag">Oportunidades Curadas</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-[#0B172A] mt-2 font-heading" data-i18n="portfolio-title">Propiedades Destacadas</h2>
+                <span class="text-xs font-bold uppercase tracking-widest text-[#D4AF37]" data-i18n="portfolio-tag">Oportunidad Exclusiva</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-[#0B172A] mt-2 font-heading" data-i18n="portfolio-title">Propiedad en Venta</h2>
                 <div class="w-20 h-1 bg-[#D4AF37] mx-auto mt-4"></div>
-                <p class="text-slate-600 max-w-2xl mx-auto mt-4 text-sm sm:text-base font-normal" data-i18n="portfolio-subtitle">
-                    Oportunidades seleccionadas bajo rigurosos criterios de seguridad jurídica, ubicación premium y alta rentabilidad.
-                </p>
             </div>
 
-            <!-- FEATURED LISTING SHOWCASE: Real Beachfront Apartment in Pampatar -->
-            <div class="mb-16 bg-gradient-to-br from-slate-900 to-[#0B172A] rounded-3xl p-6 sm:p-10 border border-[#D4AF37]/40 shadow-2xl text-white">
-                <div class="flex flex-wrap items-center justify-between gap-4 mb-8 pb-6 border-b border-white/10">
-                    <div>
-                        <span class="inline-flex items-center gap-1.5 bg-[#D4AF37]/20 text-[#D4AF37] text-xs font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full border border-[#D4AF37]/40">
-                            <i data-lucide="star" class="w-3.5 h-3.5 fill-[#D4AF37]"></i>
-                            Propiedad Destacada Principal
-                        </span>
-                        <h3 class="text-2xl sm:text-3xl font-extrabold font-heading text-white mt-2" data-i18n="prop-1-title">Apartamento de Lujo Frente al Mar</h3>
-                        <p class="text-xs sm:text-sm text-[#D4AF37] font-semibold uppercase tracking-wider mt-1" data-i18n="prop-1-loc">Bahía de Pampatar • Isla de Margarita</p>
-                    </div>
-                    <div class="text-right">
-                        <a href="https://wa.me/584221624056?text=Hola%20Heidy%2C%20tengo%20inter%C3%A9s%20en%20el%20Apartamento%20de%20Lujo%20Frente%20al%20Mar%20en%20Pampatar.%20Me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n." 
-                           target="_blank" 
-                           rel="noopener noreferrer" 
-                           class="prop-wa-link inline-flex items-center gap-2.5 bg-[#D4AF37] hover:bg-[#C59F2E] text-[#0B172A] font-bold px-6 py-3.5 rounded-xl text-xs uppercase tracking-wider transition-all shadow-xl hover:-translate-y-0.5" 
-                           data-prop="prop-1">
-                            <i data-lucide="message-circle" class="w-4 h-4"></i>
-                            <span data-i18n="prop-btn-consult">Consultar por WhatsApp</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Multi-Photo Gallery Grid -->
-                <div class="grid lg:grid-cols-12 gap-6 items-start">
-                    
-                    <!-- Main Master Photo (8 cols) -->
-                    <div class="lg:col-span-8 group relative overflow-hidden rounded-2xl border border-white/10 aspect-[16/10] bg-slate-800">
-                        <img src="photos/listing-apt-main.webp" 
-                             alt="Apartamento de Lujo Frente al Mar - Vista Principal y Sala" 
-                             width="1200" 
-                             height="750" 
-                             loading="lazy" 
-                             decoding="async" 
-                             class="w-full h-full object-cover group-hover:scale-103 transition-transform duration-700">
-                        <div class="absolute bottom-4 left-4 bg-[#0B172A]/85 backdrop-blur-sm text-xs font-semibold px-3 py-1.5 rounded-lg border border-white/10">
-                            Vista Principal • Sala Panorámica
-                        </div>
-                    </div>
-
-                    <!-- 3 Thumbnail Detail Photos (4 cols stacked) -->
-                    <div class="lg:col-span-4 grid grid-cols-3 lg:grid-cols-1 gap-4">
-                        <div class="group relative overflow-hidden rounded-xl border border-white/10 aspect-[16/10] bg-slate-800">
-                            <img src="photos/listing-apt-2.webp" 
-                                 alt="Apartamento en Pampatar - Terraza y Balcón con Vista al Mar" 
-                                 width="600" 
-                                 height="375" 
-                                 loading="lazy" 
-                                 decoding="async" 
-                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute bottom-2 left-2 bg-[#0B172A]/80 text-[10px] px-2 py-0.5 rounded font-medium">Terraza Panorámica</div>
-                        </div>
-                        <div class="group relative overflow-hidden rounded-xl border border-white/10 aspect-[16/10] bg-slate-800">
-                            <img src="photos/listing-apt-3.webp" 
-                                 alt="Apartamento en Pampatar - Cocina Moderna Equipada" 
-                                 width="600" 
-                                 height="375" 
-                                 loading="lazy" 
-                                 decoding="async" 
-                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute bottom-2 left-2 bg-[#0B172A]/80 text-[10px] px-2 py-0.5 rounded font-medium">Cocina & Interiores</div>
-                        </div>
-                        <div class="group relative overflow-hidden rounded-xl border border-white/10 aspect-[16/10] bg-slate-800">
-                            <img src="photos/listing-apt-4.webp" 
-                                 alt="Apartamento en Pampatar - Habitación Principal" 
-                                 width="600" 
-                                 height="375" 
-                                 loading="lazy" 
-                                 decoding="async" 
-                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute bottom-2 left-2 bg-[#0B172A]/80 text-[10px] px-2 py-0.5 rounded font-medium">Master Suite</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Apartment Specs & Narrative Footprint -->
-                <div class="mt-8 pt-6 border-t border-white/10 grid md:grid-cols-3 gap-6 items-center">
-                    <p class="md:col-span-2 text-slate-300 text-sm leading-relaxed" data-i18n="prop-1-desc">
-                        Acceso directo a la playa, terraza con vista panorámica al océano, acabados de primera línea, cocina integrada moderna, piscina privada y vigilancia estricta 24/7.
-                    </p>
-                    <div class="flex items-center justify-around bg-white/5 p-4 rounded-xl border border-white/10 text-xs font-semibold">
-                        <span class="flex items-center gap-1.5"><i data-lucide="bed" class="w-4 h-4 text-[#D4AF37]"></i> 2 Hab</span>
-                        <span class="flex items-center gap-1.5"><i data-lucide="bath" class="w-4 h-4 text-[#D4AF37]"></i> 2 Baños</span>
-                        <span class="flex items-center gap-1.5"><i data-lucide="maximize" class="w-4 h-4 text-[#D4AF37]"></i> 110 m²</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ADDITIONAL MARKET OPPORTUNITIES (3 CARDS) -->
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- EXCLUSIVE SHOWCASE: Real Apartment in Costa Azul -->
+            <div class="bg-gradient-to-br from-slate-900 to-[#0B172A] rounded-3xl p-6 sm:p-10 lg:p-12 border border-[#D4AF37]/40 shadow-2xl text-white">
                 
-                <!-- Property 2: Villa Costa Azul -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-200 hover:shadow-2xl transition-all duration-300 flex flex-col group">
-                    <div class="relative h-60 overflow-hidden bg-slate-100 aspect-[4/3]">
-                        <img src="photos/property-sample-2.webp" 
-                             alt="Villa Panorámica con Vista al Mar Costa Azul" 
-                             width="800" 
-                             height="600" 
-                             loading="lazy" 
-                             decoding="async" 
-                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <span class="absolute top-3 left-3 bg-[#0B172A]/90 text-[#D4AF37] text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-[#D4AF37]/30" data-i18n="prop-2-tag">Villa Exclusiva</span>
-                    </div>
-                    <div class="p-6 flex-1 flex flex-col justify-between">
-                        <div>
-                            <p class="text-xs font-semibold text-[#D4AF37] uppercase tracking-wide" data-i18n="prop-2-loc">Costa Azul</p>
-                            <h3 class="text-lg font-bold text-[#0B172A] font-heading mt-1" data-i18n="prop-2-title">Villa Panorámica con Vista al Mar</h3>
-                            <p class="text-slate-600 text-xs mt-2 leading-relaxed" data-i18n="prop-2-desc">Residencia de autor con piscina infinity, amplios jardines tropicales, techos altos y máxima privacidad.</p>
-                            
-                            <div class="flex items-center gap-4 text-xs font-medium text-slate-500 my-4 py-2 border-y border-slate-100">
-                                <span class="flex items-center gap-1"><i data-lucide="bed" class="w-3.5 h-3.5 text-[#D4AF37]"></i> 4 Hab</span>
-                                <span class="flex items-center gap-1"><i data-lucide="bath" class="w-3.5 h-3.5 text-[#D4AF37]"></i> 4 Baños</span>
-                                <span class="flex items-center gap-1"><i data-lucide="maximize" class="w-3.5 h-3.5 text-[#D4AF37]"></i> 380 m²</span>
-                            </div>
+                <!-- Listing Header & Price Badge -->
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-8 border-b border-white/10">
+                    <div class="space-y-2">
+                        <div class="inline-flex items-center gap-2 bg-[#D4AF37]/20 text-[#D4AF37] text-xs font-extrabold uppercase tracking-wider px-3.5 py-1.5 rounded-full border border-[#D4AF37]/40">
+                            <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+                            <span data-i18n="prop-headline">VENTA | EXCLUSIVO APARTAMENTO CON VISTA AL MAR</span>
                         </div>
-                        
-                        <a href="https://wa.me/584221624056?text=Hola%20Heidy%2C%20tengo%20inter%C3%A9s%20en%20la%20Villa%20Panor%C3%A1mica%20con%20Vista%20al%20Mar%20en%20Costa%20Azul.%20Me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n." 
+                        <h3 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold font-heading text-white">
+                            Apartamento de Lujo en Costa Azul
+                        </h3>
+                        <p class="text-sm sm:text-base text-slate-300 flex items-center gap-2" data-i18n="prop-loc">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-[#D4AF37] shrink-0"></i>
+                            Urbanización Dumar, Costa Azul • A 5 minutos del C.C. La Vela, Isla de Margarita
+                        </p>
+                    </div>
+
+                    <!-- Price & WhatsApp Action Block -->
+                    <div class="flex flex-col sm:flex-row md:flex-col items-start sm:items-center md:items-end justify-between gap-4 shrink-0">
+                        <div class="text-left md:text-right">
+                            <span class="text-xs uppercase font-semibold text-slate-400 tracking-wider block" data-i18n="prop-price-label">Precio de Inversión</span>
+                            <span class="text-3xl sm:text-4xl font-extrabold text-[#D4AF37] font-heading tracking-tight" data-i18n="prop-price">$108.000 USD</span>
+                        </div>
+                        <a href="https://wa.me/584221624056?text=Hola%20Heidy%2C%20tengo%20inter%C3%A9s%20en%20el%20Apartamento%20en%20Urb.%20Dumar%20Costa%20Azul%20(%24108.000%20USD).%20Me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n." 
+                           id="prop-showcase-wa" 
                            target="_blank" 
                            rel="noopener noreferrer" 
-                           class="prop-wa-link w-full inline-flex items-center justify-center gap-2 bg-[#0B172A] hover:bg-[#D4AF37] hover:text-[#0B172A] text-white font-bold py-2.5 rounded-lg text-xs uppercase tracking-wider transition-colors" 
-                           data-prop="prop-2">
+                           class="prop-wa-link inline-flex items-center gap-2.5 bg-[#D4AF37] hover:bg-[#C59F2E] text-[#0B172A] font-bold px-7 py-3.5 rounded-xl text-xs uppercase tracking-wider transition-all shadow-xl hover:-translate-y-0.5" 
+                           data-prop="prop-costa-azul">
                             <i data-lucide="message-circle" class="w-4 h-4"></i>
                             <span data-i18n="prop-btn-consult">Consultar por WhatsApp</span>
                         </a>
                     </div>
                 </div>
 
-                <!-- Property 3: Commercial Space Playa El Angel -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-200 hover:shadow-2xl transition-all duration-300 flex flex-col group">
-                    <div class="relative h-60 overflow-hidden bg-slate-100 aspect-[4/3]">
-                        <img src="photos/property-sample-3.webp" 
-                             alt="Local Comercial Prime Playa El Angel" 
-                             width="800" 
+                <!-- Narrative Description -->
+                <div class="py-6">
+                    <p class="text-slate-200 text-sm sm:text-base leading-relaxed max-w-4xl" data-i18n="prop-desc">
+                        Disfruta del confort, la tranquilidad y el privilegio de despertar frente al mar. Una propiedad lista para habitar, ideal como residencia vacacional, inversión de alta rentabilidad o tu nuevo hogar en el Caribe.
+                    </p>
+                </div>
+
+                <!-- Clean 7-Photo Architectural Gallery (No Caption Boxes, Pure High-Resolution Luxury) -->
+                <div class="space-y-4 my-4">
+                    <!-- 1. Master Featured Photo -->
+                    <div class="group relative overflow-hidden rounded-2xl border border-[#D4AF37]/30 aspect-[16/9] sm:aspect-[16/9] lg:aspect-[21/9] bg-slate-800 shadow-xl">
+                        <img src="photos/listing-apt-main.webp" 
+                             alt="Apartamento en Costa Azul - Vista Panorámica al Mar" 
+                             width="1400" 
                              height="600" 
                              loading="lazy" 
                              decoding="async" 
-                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <span class="absolute top-3 left-3 bg-[#0B172A]/90 text-[#D4AF37] text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-[#D4AF37]/30" data-i18n="prop-3-tag">Comercial</span>
+                             class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-700">
                     </div>
-                    <div class="p-6 flex-1 flex flex-col justify-between">
-                        <div>
-                            <p class="text-xs font-semibold text-[#D4AF37] uppercase tracking-wide" data-i18n="prop-3-loc">Playa El Ángel</p>
-                            <h3 class="text-lg font-bold text-[#0B172A] font-heading mt-1" data-i18n="prop-3-title">Local Comercial Prime</h3>
-                            <p class="text-slate-600 text-xs mt-2 leading-relaxed" data-i18n="prop-3-desc">Ubicado en avenida de alto tráfico peatonal y vehicular, vitrina de doble altura, puestos de estacionamiento y planta eléctrica.</p>
-                            
-                            <div class="flex items-center gap-4 text-xs font-medium text-slate-500 my-4 py-2 border-y border-slate-100">
-                                <span class="flex items-center gap-1"><i data-lucide="briefcase" class="w-3.5 h-3.5 text-[#D4AF37]"></i> Retail/Office</span>
-                                <span class="flex items-center gap-1"><i data-lucide="maximize" class="w-3.5 h-3.5 text-[#D4AF37]"></i> 85 m²</span>
-                            </div>
+
+                    <!-- 2. Clean Multi-Photo Grid of the Remaining 6 Images -->
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        <div class="group relative overflow-hidden rounded-xl border border-white/10 aspect-[4/3] bg-slate-800 shadow-md">
+                            <img src="photos/listing-apt-2.webp" 
+                                 alt="Apartamento Costa Azul - Terraza" 
+                                 width="700" 
+                                 height="525" 
+                                 loading="lazy" 
+                                 decoding="async" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         </div>
-                        
-                        <a href="https://wa.me/584221624056?text=Hola%20Heidy%2C%20tengo%20inter%C3%A9s%20en%20el%20Local%20Comercial%20Prime%20en%20Playa%20El%20%C3%81ngel.%20Me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n." 
-                           target="_blank" 
-                           rel="noopener noreferrer" 
-                           class="prop-wa-link w-full inline-flex items-center justify-center gap-2 bg-[#0B172A] hover:bg-[#D4AF37] hover:text-[#0B172A] text-white font-bold py-2.5 rounded-lg text-xs uppercase tracking-wider transition-colors" 
-                           data-prop="prop-3">
-                            <i data-lucide="message-circle" class="w-4 h-4"></i>
-                            <span data-i18n="prop-btn-consult">Consultar por WhatsApp</span>
-                        </a>
+                        <div class="group relative overflow-hidden rounded-xl border border-white/10 aspect-[4/3] bg-slate-800 shadow-md">
+                            <img src="photos/listing-apt-3.webp" 
+                                 alt="Apartamento Costa Azul - Cocina" 
+                                 width="700" 
+                                 height="525" 
+                                 loading="lazy" 
+                                 decoding="async" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="group relative overflow-hidden rounded-xl border border-white/10 aspect-[4/3] bg-slate-800 shadow-md">
+                            <img src="photos/listing-apt-4.webp" 
+                                 alt="Apartamento Costa Azul - Habitación Principal" 
+                                 width="700" 
+                                 height="525" 
+                                 loading="lazy" 
+                                 decoding="async" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="group relative overflow-hidden rounded-xl border border-white/10 aspect-[4/3] bg-slate-800 shadow-md">
+                            <img src="photos/property-sample-2.webp" 
+                                 alt="Apartamento Costa Azul - Áreas Comunes" 
+                                 width="700" 
+                                 height="525" 
+                                 loading="lazy" 
+                                 decoding="async" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="group relative overflow-hidden rounded-xl border border-white/10 aspect-[4/3] bg-slate-800 shadow-md">
+                            <img src="photos/property-sample-3.webp" 
+                                 alt="Apartamento Costa Azul - Vistas y Espacios" 
+                                 width="700" 
+                                 height="525" 
+                                 loading="lazy" 
+                                 decoding="async" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="group relative overflow-hidden rounded-xl border border-white/10 aspect-[4/3] bg-slate-800 shadow-md">
+                            <img src="photos/property-sample-4.webp" 
+                                 alt="Apartamento Costa Azul - Entorno Residencial" 
+                                 width="700" 
+                                 height="525" 
+                                 loading="lazy" 
+                                 decoding="async" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
                     </div>
                 </div>
 
-                <!-- Property 4: Development Land El Yaque -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-200 hover:shadow-2xl transition-all duration-300 flex flex-col group sm:col-span-2 lg:col-span-1">
-                    <div class="relative h-60 overflow-hidden bg-slate-100 aspect-[4/3]">
-                        <img src="photos/property-sample-4.webp" 
-                             alt="Terreno para Desarrollo Turístico Sector El Yaque" 
-                             width="800" 
-                             height="600" 
-                             loading="lazy" 
-                             decoding="async" 
-                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <span class="absolute top-3 left-3 bg-[#0B172A]/90 text-[#D4AF37] text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-[#D4AF37]/30" data-i18n="prop-4-tag">Terreno de Inversión</span>
-                    </div>
-                    <div class="p-6 flex-1 flex flex-col justify-between">
-                        <div>
-                            <p class="text-xs font-semibold text-[#D4AF37] uppercase tracking-wide" data-i18n="prop-4-loc">Sector El Yaque</p>
-                            <h3 class="text-lg font-bold text-[#0B172A] font-heading mt-1" data-i18n="prop-4-title">Terreno para Desarrollo Turístico</h3>
-                            <p class="text-slate-600 text-xs mt-2 leading-relaxed" data-i18n="prop-4-desc">Zonificación costera ideal para hotel boutique, posada deportiva o conjunto residencial de villas ecológicas.</p>
-                            
-                            <div class="flex items-center gap-4 text-xs font-medium text-slate-500 my-4 py-2 border-y border-slate-100">
-                                <span class="flex items-center gap-1"><i data-lucide="map" class="w-3.5 h-3.5 text-[#D4AF37]"></i> Zoned</span>
-                                <span class="flex items-center gap-1"><i data-lucide="maximize" class="w-3.5 h-3.5 text-[#D4AF37]"></i> 1,200 m²</span>
+                <!-- Key Property Features & Condo Amenities Grid -->
+                <div class="mt-10 pt-8 border-t border-white/10 grid lg:grid-cols-12 gap-8 items-start">
+                    
+                    <!-- Left: Key Features Grid (7 items) -->
+                    <div class="lg:col-span-7 space-y-4">
+                        <h4 class="text-xs font-bold uppercase tracking-widest text-[#D4AF37]" data-i18n="prop-features-title">Características Principales</h4>
+                        <div class="grid sm:grid-cols-2 gap-3 text-xs sm:text-sm">
+                            <div class="bg-white/5 border border-white/10 p-3 rounded-xl flex items-center gap-2.5">
+                                <span class="text-base">📐</span>
+                                <span class="text-slate-200" data-i18n="feat-area"><strong>Área:</strong> 105 m² aprox.</span>
+                            </div>
+                            <div class="bg-white/5 border border-white/10 p-3 rounded-xl flex items-center gap-2.5">
+                                <span class="text-base">🌅</span>
+                                <span class="text-slate-200" data-i18n="feat-view"><strong>Vista:</strong> Panorámica al mar</span>
+                            </div>
+                            <div class="bg-white/5 border border-white/10 p-3 rounded-xl flex items-center gap-2.5 sm:col-span-2">
+                                <span class="text-base">🛋️</span>
+                                <span class="text-slate-200" data-i18n="feat-dist"><strong>Distribución:</strong> Sala luminosa con excelente distribución y comedor independiente</span>
+                            </div>
+                            <div class="bg-white/5 border border-white/10 p-3 rounded-xl flex items-center gap-2.5">
+                                <span class="text-base">🎛️</span>
+                                <span class="text-slate-200" data-i18n="feat-kitchen"><strong>Cocina:</strong> Moderna y funcional</span>
+                            </div>
+                            <div class="bg-white/5 border border-white/10 p-3 rounded-xl flex items-center gap-2.5">
+                                <span class="text-base">🛏️</span>
+                                <span class="text-slate-200" data-i18n="feat-beds"><strong>Habitaciones:</strong> 2 con baño privado</span>
+                            </div>
+                            <div class="bg-white/5 border border-white/10 p-3 rounded-xl flex items-center gap-2.5">
+                                <span class="text-base">🚻</span>
+                                <span class="text-slate-200" data-i18n="feat-baths"><strong>Baño auxiliar:</strong> 1 de visitas</span>
+                            </div>
+                            <div class="bg-white/5 border border-white/10 p-3 rounded-xl flex items-center gap-2.5">
+                                <span class="text-base">🚗</span>
+                                <span class="text-slate-200" data-i18n="feat-parking"><strong>Estacionamiento:</strong> 2 puestos techados</span>
                             </div>
                         </div>
-                        
-                        <a href="https://wa.me/584221624056?text=Hola%20Heidy%2C%20tengo%20inter%C3%A9s%20en%20el%20Terreno%20para%20Desarrollo%20Tur%C3%ADstico%20en%20El%20Yaque.%20Me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n." 
-                           target="_blank" 
-                           rel="noopener noreferrer" 
-                           class="prop-wa-link w-full inline-flex items-center justify-center gap-2 bg-[#0B172A] hover:bg-[#D4AF37] hover:text-[#0B172A] text-white font-bold py-2.5 rounded-lg text-xs uppercase tracking-wider transition-colors" 
-                           data-prop="prop-4">
-                            <i data-lucide="message-circle" class="w-4 h-4"></i>
-                            <span data-i18n="prop-btn-consult">Consultar por WhatsApp</span>
-                        </a>
                     </div>
+
+                    <!-- Right: Condo Amenities & Bottom Call to Action -->
+                    <div class="lg:col-span-5 space-y-4">
+                        <h4 class="text-xs font-bold uppercase tracking-widest text-[#D4AF37]" data-i18n="prop-amenities-title">Amenidades del Conjunto</h4>
+                        <div class="space-y-3 text-xs sm:text-sm">
+                            <div class="bg-white/5 border border-white/10 p-3.5 rounded-xl flex items-center gap-3">
+                                <span class="text-xl">🏊</span>
+                                <span class="text-slate-200" data-i18n="amen-pool">Piscina</span>
+                            </div>
+                            <div class="bg-white/5 border border-white/10 p-3.5 rounded-xl flex items-center gap-3">
+                                <span class="text-xl">🍖</span>
+                                <span class="text-slate-200" data-i18n="amen-bbq">Área social con parrillera</span>
+                            </div>
+                            <div class="bg-white/5 border border-white/10 p-3.5 rounded-xl flex items-center gap-3">
+                                <span class="text-xl">🛡️</span>
+                                <span class="text-slate-200" data-i18n="amen-security">Vigilancia privada permanente y control de acceso 24/7</span>
+                            </div>
+                        </div>
+
+                        <div class="pt-2">
+                            <a href="https://wa.me/584221624056?text=Hola%20Heidy%2C%20tengo%20inter%C3%A9s%20en%20el%20Apartamento%20en%20Urb.%20Dumar%20Costa%20Azul%20(%24108.000%20USD).%20Me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n." 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="w-full inline-flex items-center justify-center gap-2 bg-[#D4AF37] hover:bg-[#C59F2E] text-[#0B172A] font-bold py-3.5 rounded-xl text-xs uppercase tracking-wider transition-all shadow-lg hover:shadow-gold-sm">
+                                <i data-lucide="calendar" class="w-4 h-4"></i>
+                                <span data-i18n="prop-btn-schedule">Agendar Visita / Recibir Dossier</span>
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
@@ -1232,26 +1237,27 @@
                 "srv-4-title": "Escrow & Legal Closing",
                 "srv-4-desc": "Complete title history audit, municipal solvent status, Power of Attorney representation, and seamless public registry deed registration.",
 
-                "portfolio-tag": "Curated Listings",
-                "portfolio-title": "Featured Property Opportunities",
-                "portfolio-subtitle": "Hand-picked opportunities vetted for title cleanliness, strategic location, and high investment return potential.",
-                "prop-1-tag": "Beachfront",
-                "prop-1-loc": "Pampatar Bay",
-                "prop-1-title": "Luxury Beachfront Apartment",
-                "prop-1-desc": "Direct beach access, panoramic ocean-facing terrace, private pool amenities, and 24/7 private security.",
-                "prop-2-tag": "Exclusive Villa",
-                "prop-2-loc": "Costa Azul",
-                "prop-2-title": "Ocean-View Panoramic Villa",
-                "prop-2-desc": "Architect-designed residence with infinity pool, lush tropical garden, high ceilings, and gated community security.",
-                "prop-3-tag": "Commercial",
-                "prop-3-loc": "Playa El Ángel",
-                "prop-3-title": "Prime Commercial Space",
-                "prop-3-desc": "High pedestrian traffic avenue, double-height storefront, dedicated customer parking, and backup generator.",
-                "prop-4-tag": "Land Investment",
-                "prop-4-loc": "El Yaque Sector",
-                "prop-4-title": "Development Land Plot",
-                "prop-4-desc": "Prime coastal zoning ready for boutique hotel, windsurfing resort, or residential eco-villas development.",
-                "prop-btn-consult": "Consult via WhatsApp",
+                "portfolio-tag": "Exclusive Opportunity",
+                "portfolio-title": "Property for Sale",
+                "prop-headline": "FOR SALE | EXCLUSIVE OCEAN-VIEW APARTMENT",
+                "prop-loc": "<i data-lucide=\"map-pin\" class=\"w-4 h-4 text-[#D4AF37] shrink-0\"></i> Urbanización Dumar, Costa Azul • 5 mins from C.C. La Vela, Margarita Island",
+                "prop-price-label": "Investment Price",
+                "prop-price": "$108,000 USD",
+                "prop-desc": "Enjoy the comfort, serenity, and privilege of waking up to the ocean. Move-in ready, ideal as a vacation residence, high-yield investment, or your Caribbean home.",
+                "prop-features-title": "Key Property Features",
+                "feat-area": "<strong>Area:</strong> Approx. 105 m² (1,130 sq ft)",
+                "feat-view": "<strong>View:</strong> Panoramic ocean view",
+                "feat-dist": "<strong>Layout:</strong> Bright living room with optimal distribution and separate dining area",
+                "feat-kitchen": "<strong>Kitchen:</strong> Modern and fully functional",
+                "feat-beds": "<strong>Bedrooms:</strong> 2 suites each with private bathroom",
+                "feat-baths": "<strong>Guest Bath:</strong> 1 powder room",
+                "feat-parking": "<strong>Parking:</strong> 2 covered parking spaces",
+                "prop-amenities-title": "Condo Amenities",
+                "amen-pool": "Swimming pool",
+                "amen-bbq": "Social lounge with BBQ grill",
+                "amen-security": "24/7 Gated security & controlled access",
+                "prop-btn-schedule": "Schedule Private Tour / Request Dossier",
+                "prop-btn-consult": "Inquire via WhatsApp",
 
                 "sec-tag": "The Trust Factor",
                 "sec-title": "Legal Security & Risk Mitigation",
@@ -1349,25 +1355,26 @@
                 "srv-4-title": "Seguridad Legal y Cierre Registral",
                 "srv-4-desc": "Auditoría de títulos, solvencias municipales, redacción de contratos, asesoría en poderes y acompañamiento ante el Registro Público (SAREN).",
 
-                "portfolio-tag": "Oportunidades Curadas",
-                "portfolio-title": "Propiedades Destacadas",
-                "portfolio-subtitle": "Oportunidades seleccionadas bajo rigurosos criterios de seguridad jurídica, ubicación premium y alta rentabilidad.",
-                "prop-1-tag": "Frente al Mar",
-                "prop-1-loc": "Bahía de Pampatar",
-                "prop-1-title": "Apartamento de Lujo Frente al Mar",
-                "prop-1-desc": "Acceso directo a la playa, terraza con vista panorámica al océano, piscina privada y vigilancia estricta 24/7.",
-                "prop-2-tag": "Villa Exclusiva",
-                "prop-2-loc": "Costa Azul",
-                "prop-2-title": "Villa Panorámica con Vista al Mar",
-                "prop-2-desc": "Residencia de autor con piscina infinity, amplios jardines tropicales, techos altos y máxima privacidad.",
-                "prop-3-tag": "Comercial",
-                "prop-3-loc": "Playa El Ángel",
-                "prop-3-title": "Local Comercial Prime",
-                "prop-3-desc": "Ubicado en avenida de alto tráfico peatonal y vehicular, vitrina de doble altura, puestos de estacionamiento y planta eléctrica.",
-                "prop-4-tag": "Terreno de Inversión",
-                "prop-4-loc": "Sector El Yaque",
-                "prop-4-title": "Terreno para Desarrollo Turístico",
-                "prop-4-desc": "Zonificación costera ideal para hotel boutique, posada deportiva o conjunto residencial de villas ecológicas.",
+                "portfolio-tag": "Oportunidad Exclusiva",
+                "portfolio-title": "Propiedad en Venta",
+                "prop-headline": "VENTA | EXCLUSIVO APARTAMENTO CON VISTA AL MAR",
+                "prop-loc": "<i data-lucide=\"map-pin\" class=\"w-4 h-4 text-[#D4AF37] shrink-0\"></i> Urbanización Dumar, Costa Azul • A 5 minutos del C.C. La Vela, Isla de Margarita",
+                "prop-price-label": "Precio de Inversión",
+                "prop-price": "$108.000 USD",
+                "prop-desc": "Disfruta del confort, la tranquilidad y el privilegio de despertar frente al mar. Una propiedad lista para habitar, ideal como residencia vacacional, inversión de alta rentabilidad o tu nuevo hogar en el Caribe.",
+                "prop-features-title": "Características Principales",
+                "feat-area": "<strong>Área:</strong> 105 m² aprox.",
+                "feat-view": "<strong>Vista:</strong> Panorámica al mar",
+                "feat-dist": "<strong>Distribución:</strong> Sala luminosa con excelente distribución y comedor independiente",
+                "feat-kitchen": "<strong>Cocina:</strong> Moderna y funcional",
+                "feat-beds": "<strong>Habitaciones:</strong> 2 con baño privado",
+                "feat-baths": "<strong>Baño auxiliar:</strong> 1 de visitas",
+                "feat-parking": "<strong>Estacionamiento:</strong> 2 puestos techados",
+                "prop-amenities-title": "Amenidades del Conjunto",
+                "amen-pool": "Piscina",
+                "amen-bbq": "Área social con parrillera",
+                "amen-security": "Vigilancia privada permanente y control de acceso 24/7",
+                "prop-btn-schedule": "Agendar Visita / Recibir Dossier",
                 "prop-btn-consult": "Consultar por WhatsApp",
 
                 "sec-tag": "El Factor Confianza",
@@ -1436,16 +1443,10 @@
 
         const propertyWaMessages = {
             en: {
-                "prop-1": "Hello Heidy, I am interested in the Luxury Beachfront Apartment in Pampatar. Please share further details.",
-                "prop-2": "Hello Heidy, I am interested in the Ocean-View Panoramic Villa in Costa Azul. Please share further details.",
-                "prop-3": "Hello Heidy, I am interested in the Prime Commercial Space in Playa El Angel. Please share further details.",
-                "prop-4": "Hello Heidy, I am interested in the Development Land Plot in El Yaque. Please share further details."
+                "prop-costa-azul": "Hello Heidy, I am interested in the Apartment in Urb. Dumar Costa Azul ($108,000 USD). Please share further details."
             },
             es: {
-                "prop-1": "Hola Heidy, tengo interés en el Apartamento de Lujo Frente al Mar en Pampatar. Me gustaría recibir más información.",
-                "prop-2": "Hola Heidy, tengo interés en la Villa Panorámica con Vista al Mar en Costa Azul. Me gustaría recibir más información.",
-                "prop-3": "Hola Heidy, tengo interés en el Local Comercial Prime en Playa El Ángel. Me gustaría recibir más información.",
-                "prop-4": "Hola Heidy, tengo interés en el Terreno para Desarrollo Turístico en El Yaque. Me gustaría recibir más información."
+                "prop-costa-azul": "Hola Heidy, tengo interés en el Apartamento en Urb. Dumar Costa Azul ($108.000 USD). Me gustaría recibir más información."
             }
         };
 
@@ -1460,6 +1461,7 @@
                     el.innerHTML = translations[currentLang][key];
                 }
             });
+            lucide.createIcons();
 
             // Input Placeholders replacement
             document.querySelectorAll('[data-i18n-ph]').forEach(el => {
