@@ -222,12 +222,15 @@
 
     <style>
         :root {
-            --primary-navy: #0B172A;
-            --secondary-navy: #132644;
-            --card-navy: #0F223D;
+            --primary-navy: #0F2444;
+            --secondary-navy: #16325B;
+            --card-navy: #16325B;
             --accent-gold: #D4AF37;
             --accent-gold-hover: #C59F2E;
-            --accent-gold-light: #F5E6A3;
+            --accent-gold-light: #F3E5AB;
+            --accent-emerald: #10B981;
+            --accent-emerald-dark: #059669;
+            --surface-light: #F8FAFC;
         }
         html {
             scroll-behavior: smooth;
@@ -248,7 +251,7 @@
 
         /* Parallax Hero Background */
         .hero-banner {
-            background-image: linear-gradient(180deg, rgba(11, 23, 42, 0.82) 0%, rgba(19, 38, 68, 0.88) 100%), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2000&q=85');
+            background-image: linear-gradient(180deg, rgba(15, 36, 68, 0.85) 0%, rgba(22, 50, 91, 0.90) 100%), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2000&q=85');
             background-size: cover;
             background-position: center;
             background-attachment: scroll;
@@ -297,19 +300,22 @@
 
         /* Custom Gold Glows & Gradients */
         .gold-gradient-text {
-            background: linear-gradient(135deg, #F9E79F 0%, #D4AF37 50%, #B7950B 100%);
+            background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 50%, #C59F2E 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+        .emerald-glow {
+            box-shadow: 0 0 16px rgba(16, 185, 129, 0.25);
+        }
         .gold-border-glow {
-            box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.25), 0 4px 14px rgba(15, 36, 68, 0.2);
         }
     </style>
 </head>
-<body class="bg-[#F8FAFC] text-slate-800 antialiased selection:bg-[#D4AF37] selection:text-[#0B172A]">
+<body class="bg-[#F8FAFC] text-slate-800 antialiased selection:bg-[#D4AF37] selection:text-[#0F2444]">
 
     <!-- 1. Top Navigation Bar -->
-    <nav id="navbar" class="fixed w-full bg-[#0B172A]/95 backdrop-blur-md z-50 border-b border-[#D4AF37]/25 transition-all duration-300">
+    <nav id="navbar" class="fixed w-full bg-[#0F2444]/95 backdrop-blur-md z-50 border-b border-[#D4AF37]/25 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
                 
@@ -332,14 +338,14 @@
                     <a href="#legal-security" data-i18n="nav-legal" class="text-slate-200 px-3.5 py-2 rounded-md hover:text-[#D4AF37] hover:bg-white/5 transition-all text-xs uppercase font-semibold tracking-wider">Seguridad Jurídica</a>
                     
                     <!-- Direct WhatsApp Icon (Desktop) -->
-                    <a href="https://wa.me/584221624056" id="wa-desktop-link" target="_blank" rel="noopener noreferrer" class="px-2.5 py-2 text-slate-200 hover:text-[#25D366] transition-transform hover:scale-110 ml-1" title="WhatsApp Chat">
+                    <a href="https://wa.me/584221624056" id="wa-desktop-link" target="_blank" rel="noopener noreferrer" class="px-2.5 py-2 text-slate-200 hover:text-[#10B981] transition-transform hover:scale-110 ml-1" title="WhatsApp Chat">
                         <svg viewBox="0 0 24 24" class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg">
                             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
                         </svg>
                     </a>
 
                     <!-- CTA Button -->
-                    <a href="#contact" data-i18n="nav-book" class="bg-[#D4AF37] hover:bg-[#C59F2E] text-[#0B172A] font-bold px-4 py-2 rounded-md text-xs uppercase tracking-wider transition-all shadow-md ml-2 hover:shadow-gold-sm">
+                    <a href="#contact" data-i18n="nav-book" class="bg-[#D4AF37] hover:bg-[#C59F2E] text-[#0F2444] font-bold px-4 py-2 rounded-md text-xs uppercase tracking-wider transition-all shadow-md ml-2 hover:shadow-gold-sm">
                         Book Advisory
                     </a>
 
@@ -349,12 +355,12 @@
                             <span id="desktop-current-lang" class="tracking-wide">ES</span>
                             <i data-lucide="chevron-down" class="w-3.5 h-3.5 text-[#D4AF37] transition-transform duration-200" id="desktop-lang-chevron"></i>
                         </button>
-                        <div id="desktop-lang-dropdown" class="absolute right-0 mt-2 w-32 bg-[#0F223D] border border-[#D4AF37]/40 rounded-md shadow-2xl hidden flex-col overflow-hidden z-50">
-                            <button class="lang-option flex items-center justify-between px-3 py-2.5 hover:bg-[#D4AF37] hover:text-[#0B172A] text-slate-200 transition-colors text-left w-full text-xs font-semibold" data-lang="en">
+                        <div id="desktop-lang-dropdown" class="absolute right-0 mt-2 w-32 bg-[#16325B] border border-[#D4AF37]/40 rounded-md shadow-2xl hidden flex-col overflow-hidden z-50">
+                            <button class="lang-option flex items-center justify-between px-3 py-2.5 hover:bg-[#D4AF37] hover:text-[#0F2444] text-slate-200 transition-colors text-left w-full text-xs font-semibold" data-lang="en">
                                 <span>English</span>
                                 <span class="text-[10px] font-bold opacity-75">EN</span>
                             </button>
-                            <button class="lang-option flex items-center justify-between px-3 py-2.5 hover:bg-[#D4AF37] hover:text-[#0B172A] text-slate-200 transition-colors text-left w-full text-xs font-semibold" data-lang="es">
+                            <button class="lang-option flex items-center justify-between px-3 py-2.5 hover:bg-[#D4AF37] hover:text-[#0F2444] text-slate-200 transition-colors text-left w-full text-xs font-semibold" data-lang="es">
                                 <span>Español</span>
                                 <span class="text-[10px] font-bold opacity-75">ES</span>
                             </button>
@@ -372,10 +378,10 @@
         </div>
 
         <!-- Mobile Drawer Menu -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-[#0B172A] border-t border-[#D4AF37]/20 pb-6 px-4">
+        <div id="mobile-menu" class="hidden lg:hidden bg-[#0F2444] border-t border-[#D4AF37]/20 pb-6 px-4">
             <!-- Mobile Language Toggle Bar -->
             <div class="py-3 border-b border-white/10 mb-4 flex justify-center gap-3">
-                <button class="mobile-lang-btn active px-6 py-1.5 rounded-full text-xs font-bold uppercase transition-all bg-[#D4AF37] text-[#0B172A] shadow-md" data-lang="es">
+                <button class="mobile-lang-btn active px-6 py-1.5 rounded-full text-xs font-bold uppercase transition-all bg-[#D4AF37] text-[#0F2444] shadow-md" data-lang="es">
                     ES • Español
                 </button>
                 <button class="mobile-lang-btn px-6 py-1.5 rounded-full text-xs font-bold uppercase transition-all bg-white/10 text-white border border-transparent" data-lang="en">
@@ -392,7 +398,7 @@
                 <a href="#contact" data-i18n="nav-contact" class="mobile-link block px-4 py-2.5 text-sm font-semibold text-slate-200 hover:text-[#D4AF37] hover:bg-white/5 rounded-md">Contacto</a>
                 
                 <div class="pt-4">
-                    <a href="#contact" data-i18n="nav-book" class="mobile-link block w-full text-center bg-[#D4AF37] text-[#0B172A] font-bold py-3 rounded-md text-xs uppercase tracking-wider">
+                    <a href="#contact" data-i18n="nav-book" class="mobile-link block w-full text-center bg-[#D4AF37] text-[#0F2444] font-bold py-3 rounded-md text-xs uppercase tracking-wider">
                         Book Advisory
                     </a>
                 </div>
@@ -408,8 +414,9 @@
                 <!-- Left Column: Content & CTAs -->
                 <div class="lg:col-span-7 text-center lg:text-left space-y-6">
                     <!-- Trust Badge -->
-                    <div class="inline-flex items-center gap-2 bg-[#0F223D]/80 border border-[#D4AF37]/50 px-4 py-1.5 rounded-full backdrop-blur-md">
-                        <i data-lucide="shield-check" class="w-4 h-4 text-[#D4AF37]"></i>
+                    <div class="inline-flex items-center gap-2 bg-[#16325B]/90 border border-[#D4AF37]/40 px-4 py-1.5 rounded-full backdrop-blur-md shadow-md">
+                        <span class="w-2 h-2 rounded-full bg-[#10B981] animate-pulse"></span>
+                        <i data-lucide="shield-check" class="w-4 h-4 text-[#10B981]"></i>
                         <span class="text-xs sm:text-sm font-semibold text-slate-100 tracking-wide uppercase" data-i18n="hero-badge">
                             Asesoría Inmobiliaria Internacional | Isla de Margarita
                         </span>
@@ -428,13 +435,13 @@
 
                     <!-- Dual CTAs -->
                     <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
-                        <a href="https://wa.me/584221624056" id="hero-wa-btn" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#D4AF37] hover:bg-[#C59F2E] text-[#0B172A] font-bold px-8 py-4 rounded-md uppercase tracking-wider text-xs sm:text-sm transition-all shadow-xl hover:-translate-y-0.5">
+                        <a href="https://wa.me/584221624056" id="hero-wa-btn" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#D4AF37] hover:bg-[#C59F2E] text-[#0F2444] font-bold px-8 py-4 rounded-md uppercase tracking-wider text-xs sm:text-sm transition-all shadow-xl hover:-translate-y-0.5">
                             <svg viewBox="0 0 24 24" class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
                             </svg>
                             <span data-i18n="hero-btn-wa">Consultar por WhatsApp</span>
                         </a>
-                        <a href="#portfolio" data-i18n="hero-btn-portfolio" class="w-full sm:w-auto inline-flex items-center justify-center border-2 border-white/80 text-white hover:bg-white hover:text-[#0B172A] font-bold px-8 py-4 rounded-md uppercase tracking-wider text-xs sm:text-sm transition-all backdrop-blur-xs">
+                        <a href="#portfolio" data-i18n="hero-btn-portfolio" class="w-full sm:w-auto inline-flex items-center justify-center border-2 border-white/80 text-white hover:bg-white hover:text-[#0F2444] font-bold px-8 py-4 rounded-md uppercase tracking-wider text-xs sm:text-sm transition-all backdrop-blur-xs">
                             Ver Propiedades
                         </a>
                     </div>
@@ -444,10 +451,10 @@
                 <div class="lg:col-span-5 flex justify-center">
                     <div class="relative w-full max-w-sm sm:max-w-md lg:max-w-none">
                         <!-- Decorative Ambient Glow -->
-                        <div class="absolute -inset-1.5 bg-gradient-to-r from-[#D4AF37]/30 to-[#B7950B]/20 rounded-3xl blur-xl opacity-75"></div>
+                        <div class="absolute -inset-1.5 bg-gradient-to-r from-[#D4AF37]/30 to-[#C59F2E]/20 rounded-3xl blur-xl opacity-75"></div>
                         
                         <!-- Portrait Container -->
-                        <div class="relative bg-[#0F223D] border border-[#D4AF37]/40 rounded-2xl overflow-hidden shadow-2xl aspect-[4/5]">
+                        <div class="relative bg-[#16325B] border border-[#D4AF37]/40 rounded-2xl overflow-hidden shadow-2xl aspect-[4/5]">
                             <img src="photos/heidy-portrait.webp" 
                                  alt="Heidy Castillo - Certified Realtor® en Isla de Margarita" 
                                  width="600" 
@@ -457,7 +464,7 @@
                                  class="w-full h-full object-cover object-top hover:scale-102 transition-transform duration-700">
                             
                             <!-- Bottom Floating Credential Overlay -->
-                            <div class="absolute bottom-4 left-4 right-4 bg-[#0B172A]/90 backdrop-blur-md border border-[#D4AF37]/40 px-4 py-3 rounded-xl flex items-center justify-between shadow-lg">
+                            <div class="absolute bottom-4 left-4 right-4 bg-[#0F2444]/90 backdrop-blur-md border border-[#D4AF37]/40 px-4 py-3 rounded-xl flex items-center justify-between shadow-lg">
                                 <div class="flex items-center gap-2.5">
                                     <div class="w-9 h-9 rounded-full bg-[#D4AF37]/20 flex items-center justify-center text-[#D4AF37] border border-[#D4AF37]/50">
                                         <i data-lucide="award" class="w-5 h-5"></i>
@@ -467,8 +474,8 @@
                                         <p class="text-[10px] text-[#D4AF37] font-semibold tracking-wider uppercase">Realtor® MVCS N° 23077</p>
                                     </div>
                                 </div>
-                                <span class="inline-flex items-center gap-1 text-[10px] font-bold text-emerald-400 bg-emerald-950/60 px-2 py-1 rounded-md border border-emerald-500/30">
-                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                                <span class="inline-flex items-center gap-1 text-[10px] font-bold text-[#10B981] bg-[#0F2444]/90 border border-[#10B981]/40 px-2 py-1 rounded-md border border-emerald-500/30">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-[#10B981] animate-pulse"></span>
                                     Disponible
                                 </span>
                             </div>
@@ -486,16 +493,16 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <span class="text-xs font-bold uppercase tracking-widest text-[#D4AF37]" data-i18n="about-tag">Perfil Profesional</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-[#0B172A] mt-2 font-heading" data-i18n="about-title">Sobre Heidy Castillo</h2>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-[#0F2444] mt-2 font-heading" data-i18n="about-title">Sobre Heidy Castillo</h2>
                 <div class="w-20 h-1 bg-[#D4AF37] mx-auto mt-4"></div>
             </div>
 
             <div class="grid lg:grid-cols-12 gap-12 items-center">
                 <!-- Left Column: Commanding Large Portrait Frame + Integrated Credentials Card -->
                 <div class="lg:col-span-5">
-                    <div class="bg-gradient-to-b from-[#0B172A] to-[#0F223D] rounded-3xl overflow-hidden shadow-2xl border border-[#D4AF37]/40 relative group">
+                    <div class="bg-gradient-to-b from-[#0F2444] to-[#16325B] rounded-3xl overflow-hidden shadow-2xl border border-[#D4AF37]/40 relative group">
                         <!-- Prominent Luxury Portrait Frame -->
-                        <div class="relative w-full aspect-[4/5] sm:h-[440px] lg:h-[480px] overflow-hidden bg-[#0F223D]">
+                        <div class="relative w-full aspect-[4/5] sm:h-[440px] lg:h-[480px] overflow-hidden bg-[#16325B]">
                             <img src="photos/heidy-about.webp" 
                                  alt="Heidy Castillo - Agente Inmobiliaria Certificada" 
                                  width="600" 
@@ -505,11 +512,11 @@
                                  class="w-full h-full object-cover object-top group-hover:scale-103 transition-transform duration-700">
                             
                             <!-- Ambient Bottom Gradient -->
-                            <div class="absolute inset-0 bg-gradient-to-t from-[#0B172A] via-[#0B172A]/20 to-transparent"></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#0F2444] via-[#0F2444]/20 to-transparent"></div>
                             
                             <!-- Overlay Identity Badge -->
                             <div class="absolute bottom-4 left-5 right-5">
-                                <span class="inline-flex items-center gap-1 text-[10px] font-bold text-[#D4AF37] bg-[#0B172A]/90 backdrop-blur-md px-3 py-1 rounded-full border border-[#D4AF37]/40 uppercase tracking-widest mb-1.5">
+                                <span class="inline-flex items-center gap-1 text-[10px] font-bold text-[#D4AF37] bg-[#0F2444]/90 backdrop-blur-md px-3 py-1 rounded-full border border-[#D4AF37]/40 uppercase tracking-widest mb-1.5">
                                     Certified Realtor®
                                 </span>
                                 <h3 class="text-2xl font-bold font-heading text-white tracking-wide">Heidy Castillo</h3>
@@ -518,7 +525,7 @@
                         </div>
 
                         <!-- Seamlessly Attached Credential Details -->
-                        <div class="p-6 sm:p-7 space-y-4 border-t border-[#D4AF37]/30 bg-[#0B172A]/95">
+                        <div class="p-6 sm:p-7 space-y-4 border-t border-[#D4AF37]/30 bg-[#0F2444]/95">
                             <div class="flex items-start gap-3.5">
                                 <div class="w-9 h-9 rounded-xl bg-[#D4AF37]/15 flex items-center justify-center text-[#D4AF37] shrink-0 border border-[#D4AF37]/30 mt-0.5">
                                     <i data-lucide="shield-check" class="w-5 h-5"></i>
@@ -529,8 +536,8 @@
                                 </div>
                             </div>
                             <div class="flex items-start gap-3.5">
-                                <div class="w-9 h-9 rounded-xl bg-[#D4AF37]/15 flex items-center justify-center text-[#D4AF37] shrink-0 border border-[#D4AF37]/30 mt-0.5">
-                                    <i data-lucide="award" class="w-5 h-5"></i>
+                                <div class="w-9 h-9 rounded-xl bg-[#10B981]/15 flex items-center justify-center text-[#10B981] shrink-0 border border-[#10B981]/30 mt-0.5">
+                                    <i data-lucide="shield-check" class="w-5 h-5"></i>
                                 </div>
                                 <div>
                                     <p class="font-bold text-white text-sm" data-i18n="cred-soc-title">Sociedad Peruana de Bienes Raíces</p>
@@ -552,7 +559,7 @@
 
                 <!-- Right Column: Narrative & Stats -->
                 <div class="lg:col-span-7 space-y-6">
-                    <h3 class="text-2xl sm:text-3xl font-bold text-[#0B172A] font-heading leading-tight" data-i18n="about-narrative-title">
+                    <h3 class="text-2xl sm:text-3xl font-bold text-[#0F2444] font-heading leading-tight" data-i18n="about-narrative-title">
                         Tus ojos, escudo legal y guía estratégica en el mercado inmobiliario de Margarita
                     </h3>
                     <p class="text-slate-600 leading-relaxed text-sm sm:text-base" data-i18n="about-p1">
@@ -565,7 +572,7 @@
                     <!-- Stats Grid -->
                     <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4">
                         <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-center">
-                            <span class="block text-2xl sm:text-3xl font-extrabold text-[#0B172A] font-heading">+4</span>
+                            <span class="block text-2xl sm:text-3xl font-extrabold text-[#0F2444] font-heading">+4</span>
                             <span class="text-xs font-semibold text-slate-500 uppercase tracking-wide" data-i18n="stat-years">Años de Asesoría</span>
                         </div>
                         <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-center">
@@ -573,7 +580,7 @@
                             <span class="text-xs font-semibold text-slate-500 uppercase tracking-wide" data-i18n="stat-mvcs">Licencia MVCS</span>
                         </div>
                         <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-center">
-                            <span class="block text-2xl sm:text-3xl font-extrabold text-[#0B172A] font-heading">100%</span>
+                            <span class="block text-2xl sm:text-3xl font-extrabold text-[#10B981] font-heading">100%</span>
                             <span class="text-xs font-semibold text-slate-500 uppercase tracking-wide" data-i18n="stat-audit">Auditorías 100%</span>
                         </div>
                         <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-center">
@@ -587,7 +594,7 @@
     </section>
 
     <!-- 4. Why Invest in Isla de Margarita -->
-    <section id="why-margarita" class="py-24 bg-[#0B172A] text-white reveal">
+    <section id="why-margarita" class="py-24 bg-[#0F2444] text-white reveal">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <span class="text-xs font-bold uppercase tracking-widest text-[#D4AF37]" data-i18n="why-tag">Oportunidades de Inversión</span>
@@ -600,7 +607,7 @@
 
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Pillar 1 -->
-                <div class="bg-[#0F223D] p-8 rounded-2xl border border-white/10 hover:border-[#D4AF37]/60 transition-all duration-300 shadow-xl group">
+                <div class="bg-[#16325B] p-8 rounded-2xl border border-white/10 hover:border-[#D4AF37]/60 transition-all duration-300 shadow-xl group">
                     <div class="w-14 h-14 rounded-xl bg-[#D4AF37]/15 flex items-center justify-center text-[#D4AF37] mb-6 group-hover:scale-110 transition-transform">
                         <i data-lucide="trending-up" class="w-7 h-7"></i>
                     </div>
@@ -611,7 +618,7 @@
                 </div>
 
                 <!-- Pillar 2 -->
-                <div class="bg-[#0F223D] p-8 rounded-2xl border border-white/10 hover:border-[#D4AF37]/60 transition-all duration-300 shadow-xl group">
+                <div class="bg-[#16325B] p-8 rounded-2xl border border-white/10 hover:border-[#D4AF37]/60 transition-all duration-300 shadow-xl group">
                     <div class="w-14 h-14 rounded-xl bg-[#D4AF37]/15 flex items-center justify-center text-[#D4AF37] mb-6 group-hover:scale-110 transition-transform">
                         <i data-lucide="palmtree" class="w-7 h-7"></i>
                     </div>
@@ -622,7 +629,7 @@
                 </div>
 
                 <!-- Pillar 3 -->
-                <div class="bg-[#0F223D] p-8 rounded-2xl border border-white/10 hover:border-[#D4AF37]/60 transition-all duration-300 shadow-xl group">
+                <div class="bg-[#16325B] p-8 rounded-2xl border border-white/10 hover:border-[#D4AF37]/60 transition-all duration-300 shadow-xl group">
                     <div class="w-14 h-14 rounded-xl bg-[#D4AF37]/15 flex items-center justify-center text-[#D4AF37] mb-6 group-hover:scale-110 transition-transform">
                         <i data-lucide="dollar-sign" class="w-7 h-7"></i>
                     </div>
@@ -640,7 +647,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <span class="text-xs font-bold uppercase tracking-widest text-[#D4AF37]" data-i18n="services-tag">Soluciones Integrales</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-[#0B172A] mt-2 font-heading" data-i18n="services-title">Servicios Inmobiliarios Especializados</h2>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-[#0F2444] mt-2 font-heading" data-i18n="services-title">Servicios Inmobiliarios Especializados</h2>
                 <div class="w-20 h-1 bg-[#D4AF37] mx-auto mt-4"></div>
             </div>
 
@@ -648,10 +655,10 @@
                 <!-- Service 1 -->
                 <div class="bg-white p-7 rounded-xl shadow-md border border-slate-200/80 hover:shadow-xl hover:border-[#D4AF37]/70 transition-all duration-300 group flex flex-col justify-between">
                     <div>
-                        <div class="w-12 h-12 rounded-lg bg-[#0B172A] flex items-center justify-center text-[#D4AF37] mb-5 group-hover:scale-105 transition-transform">
+                        <div class="w-12 h-12 rounded-lg bg-[#0F2444] flex items-center justify-center text-[#D4AF37] mb-5 group-hover:scale-105 transition-transform">
                             <i data-lucide="home" class="w-6 h-6"></i>
                         </div>
-                        <h3 class="text-lg font-bold text-[#0B172A] mb-2 font-heading" data-i18n="srv-1-title">Compra y Venta de Inmuebles</h3>
+                        <h3 class="text-lg font-bold text-[#0F2444] mb-2 font-heading" data-i18n="srv-1-title">Compra y Venta de Inmuebles</h3>
                         <p class="text-slate-600 text-xs sm:text-sm leading-relaxed" data-i18n="srv-1-desc">
                             Búsqueda personalizada y representación para apartamentos, villas frente al mar, locales comerciales y terrenos en las mejores zonas de Margarita.
                         </p>
@@ -661,10 +668,10 @@
                 <!-- Service 2 -->
                 <div class="bg-white p-7 rounded-xl shadow-md border border-slate-200/80 hover:shadow-xl hover:border-[#D4AF37]/70 transition-all duration-300 group flex flex-col justify-between">
                     <div>
-                        <div class="w-12 h-12 rounded-lg bg-[#0B172A] flex items-center justify-center text-[#D4AF37] mb-5 group-hover:scale-105 transition-transform">
+                        <div class="w-12 h-12 rounded-lg bg-[#0F2444] flex items-center justify-center text-[#D4AF37] mb-5 group-hover:scale-105 transition-transform">
                             <i data-lucide="key" class="w-6 h-6"></i>
                         </div>
-                        <h3 class="text-lg font-bold text-[#0B172A] mb-2 font-heading" data-i18n="srv-2-title">Gestión de Alquileres</h3>
+                        <h3 class="text-lg font-bold text-[#0F2444] mb-2 font-heading" data-i18n="srv-2-title">Gestión de Alquileres</h3>
                         <p class="text-slate-600 text-xs sm:text-sm leading-relaxed" data-i18n="srv-2-desc">
                             Administración integral de propiedades en renta vacacional y residencial para propietarios a distancia, con estricto filtro de inquilinos.
                         </p>
@@ -674,10 +681,10 @@
                 <!-- Service 3 -->
                 <div class="bg-white p-7 rounded-xl shadow-md border border-slate-200/80 hover:shadow-xl hover:border-[#D4AF37]/70 transition-all duration-300 group flex flex-col justify-between">
                     <div>
-                        <div class="w-12 h-12 rounded-lg bg-[#0B172A] flex items-center justify-center text-[#D4AF37] mb-5 group-hover:scale-105 transition-transform">
+                        <div class="w-12 h-12 rounded-lg bg-[#0F2444] flex items-center justify-center text-[#D4AF37] mb-5 group-hover:scale-105 transition-transform">
                             <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
                         </div>
-                        <h3 class="text-lg font-bold text-[#0B172A] mb-2 font-heading" data-i18n="srv-3-title">Análisis Comparativo de Mercado (ACM)</h3>
+                        <h3 class="text-lg font-bold text-[#0F2444] mb-2 font-heading" data-i18n="srv-3-title">Análisis Comparativo de Mercado (ACM)</h3>
                         <p class="text-slate-600 text-xs sm:text-sm leading-relaxed" data-i18n="srv-3-desc">
                             Valuaciones basadas en datos duros de transacciones reales cerradas, evitando sobreprecios de portales.
                         </p>
@@ -687,10 +694,10 @@
                 <!-- Service 4 -->
                 <div class="bg-white p-7 rounded-xl shadow-md border border-slate-200/80 hover:shadow-xl hover:border-[#D4AF37]/70 transition-all duration-300 group flex flex-col justify-between">
                     <div>
-                        <div class="w-12 h-12 rounded-lg bg-[#0B172A] flex items-center justify-center text-[#D4AF37] mb-5 group-hover:scale-105 transition-transform">
+                        <div class="w-12 h-12 rounded-lg bg-[#0F2444] flex items-center justify-center text-[#D4AF37] mb-5 group-hover:scale-105 transition-transform">
                             <i data-lucide="file-check" class="w-6 h-6"></i>
                         </div>
-                        <h3 class="text-lg font-bold text-[#0B172A] mb-2 font-heading" data-i18n="srv-4-title">Seguridad Legal y Cierre Registral</h3>
+                        <h3 class="text-lg font-bold text-[#0F2444] mb-2 font-heading" data-i18n="srv-4-title">Seguridad Legal y Cierre Registral</h3>
                         <p class="text-slate-600 text-xs sm:text-sm leading-relaxed" data-i18n="srv-4-desc">
                             Auditoría de títulos, solvencias municipales, redacción de contratos, asesoría en poderes y acompañamiento ante el Registro Público (SAREN).
                         </p>
@@ -706,19 +713,25 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <span class="text-xs font-bold uppercase tracking-widest text-[#D4AF37]" data-i18n="portfolio-tag">Oportunidad Exclusiva</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-[#0B172A] mt-2 font-heading" data-i18n="portfolio-title">Propiedad en Venta</h2>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-[#0F2444] mt-2 font-heading" data-i18n="portfolio-title">Propiedad en Venta</h2>
                 <div class="w-20 h-1 bg-[#D4AF37] mx-auto mt-4"></div>
             </div>
 
             <!-- EXCLUSIVE SHOWCASE: Real Apartment in Costa Azul -->
-            <div class="bg-gradient-to-br from-slate-900 to-[#0B172A] rounded-3xl p-6 sm:p-10 lg:p-12 border border-[#D4AF37]/40 shadow-2xl text-white">
+            <div class="bg-gradient-to-br from-[#0F2444] to-[#16325B] rounded-3xl p-6 sm:p-10 lg:p-12 border border-[#D4AF37]/40 shadow-2xl text-white">
                 
                 <!-- Listing Header & Price Badge -->
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-8 border-b border-white/10">
                     <div class="space-y-2">
-                        <div class="inline-flex items-center gap-2 bg-[#D4AF37]/20 text-[#D4AF37] text-xs font-extrabold uppercase tracking-wider px-3.5 py-1.5 rounded-full border border-[#D4AF37]/40">
-                            <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
-                            <span data-i18n="prop-headline">VENTA | EXCLUSIVO APARTAMENTO CON VISTA AL MAR</span>
+                        <div class="flex flex-wrap items-center gap-2.5">
+                            <div class="inline-flex items-center gap-2 bg-[#D4AF37]/20 text-[#D4AF37] text-xs font-extrabold uppercase tracking-wider px-3.5 py-1.5 rounded-full border border-[#D4AF37]/40">
+                                <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+                                <span data-i18n="prop-headline">VENTA | EXCLUSIVO APARTAMENTO CON VISTA AL MAR</span>
+                            </div>
+                            <span class="inline-flex items-center gap-1.5 text-xs font-bold text-[#10B981] bg-[#0F2444]/90 border border-[#10B981]/40 px-3 py-1 rounded-full shadow-sm">
+                                <span class="w-2 h-2 rounded-full bg-[#10B981] animate-pulse"></span>
+                                Disponible para Visitas
+                            </span>
                         </div>
                         <h3 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold font-heading text-white">
                             Apartamento de Lujo en Costa Azul
@@ -739,7 +752,7 @@
                            id="prop-showcase-wa" 
                            target="_blank" 
                            rel="noopener noreferrer" 
-                           class="prop-wa-link inline-flex items-center gap-2.5 bg-[#D4AF37] hover:bg-[#C59F2E] text-[#0B172A] font-bold px-7 py-3.5 rounded-xl text-xs uppercase tracking-wider transition-all shadow-xl hover:-translate-y-0.5" 
+                           class="prop-wa-link inline-flex items-center gap-2.5 bg-[#D4AF37] hover:bg-[#C59F2E] text-[#0F2444] font-bold px-7 py-3.5 rounded-xl text-xs uppercase tracking-wider transition-all shadow-xl hover:-translate-y-0.5" 
                            data-prop="prop-costa-azul">
                             <i data-lucide="message-circle" class="w-4 h-4"></i>
                             <span data-i18n="prop-btn-consult">Consultar por WhatsApp</span>
@@ -797,7 +810,7 @@
                                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         </div>
                         <div class="group relative overflow-hidden rounded-xl border border-white/10 aspect-[4/3] bg-slate-800 shadow-md">
-                            <img src="photos/property-sample-1.webp" 
+                            <img src="photos/property-sample-2.webp" 
                                  alt="Apartamento Costa Azul - Áreas Comunes" 
                                  width="700" 
                                  height="525" 
@@ -886,7 +899,7 @@
                             <a href="https://wa.me/584221624056?text=Hola%20Heidy%2C%20tengo%20inter%C3%A9s%20en%20el%20Apartamento%20en%20Urb.%20Dumar%20Costa%20Azul%20(%24108.000%20USD).%20Me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n." 
                                target="_blank" 
                                rel="noopener noreferrer" 
-                               class="w-full inline-flex items-center justify-center gap-2 bg-[#D4AF37] hover:bg-[#C59F2E] text-[#0B172A] font-bold py-3.5 rounded-xl text-xs uppercase tracking-wider transition-all shadow-lg hover:shadow-gold-sm">
+                               class="w-full inline-flex items-center justify-center gap-2 bg-[#D4AF37] hover:bg-[#C59F2E] text-[#0F2444] font-bold py-3.5 rounded-xl text-xs uppercase tracking-wider transition-all shadow-lg hover:shadow-gold-sm">
                                 <i data-lucide="calendar" class="w-4 h-4"></i>
                                 <span data-i18n="prop-btn-schedule">Agendar Visita / Recibir Dossier</span>
                             </a>
@@ -900,7 +913,7 @@
     </section>
 
     <!-- 7. Legal Security & Risk Mitigation -->
-    <section id="legal-security" class="py-24 bg-[#0B172A] text-white relative overflow-hidden reveal">
+    <section id="legal-security" class="py-24 bg-[#0F2444] text-white relative overflow-hidden reveal">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-16">
                 <span class="text-xs font-bold uppercase tracking-widest text-[#D4AF37]" data-i18n="sec-tag">El Factor Confianza</span>
@@ -914,8 +927,8 @@
             <!-- 4-Step Roadmap Grid -->
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Step 1 -->
-                <div class="bg-[#0F223D] p-7 rounded-2xl border border-white/10 relative">
-                    <div class="w-10 h-10 rounded-full bg-[#D4AF37] text-[#0B172A] font-extrabold flex items-center justify-center text-sm mb-4 font-heading">01</div>
+                <div class="bg-[#16325B] p-7 rounded-2xl border border-white/10 relative">
+                    <div class="flex items-center justify-between mb-4"><div class="w-10 h-10 rounded-full bg-[#D4AF37] text-[#0F2444] font-extrabold flex items-center justify-center text-sm font-heading shadow-md">01</div><span class="inline-flex items-center gap-1 text-[11px] font-semibold text-[#10B981] bg-[#10B981]/15 border border-[#10B981]/30 px-2.5 py-0.5 rounded-full"><i data-lucide="shield-check" class="w-3.5 h-3.5 text-[#10B981]"></i> Verificado</span></div>
                     <h3 class="text-lg font-bold text-white mb-2 font-heading" data-i18n="step-1-title">Filtro Inicial y Due Diligence</h3>
                     <p class="text-slate-300 text-xs sm:text-sm leading-relaxed" data-i18n="step-1-desc">
                         Verificación exhaustiva de identidad del propietario, solvencias municipales e historial del inmueble.
@@ -923,8 +936,8 @@
                 </div>
 
                 <!-- Step 2 -->
-                <div class="bg-[#0F223D] p-7 rounded-2xl border border-white/10 relative">
-                    <div class="w-10 h-10 rounded-full bg-[#D4AF37] text-[#0B172A] font-extrabold flex items-center justify-center text-sm mb-4 font-heading">02</div>
+                <div class="bg-[#16325B] p-7 rounded-2xl border border-white/10 relative">
+                    <div class="flex items-center justify-between mb-4"><div class="w-10 h-10 rounded-full bg-[#D4AF37] text-[#0F2444] font-extrabold flex items-center justify-center text-sm font-heading shadow-md">02</div><span class="inline-flex items-center gap-1 text-[11px] font-semibold text-[#10B981] bg-[#10B981]/15 border border-[#10B981]/30 px-2.5 py-0.5 rounded-full"><i data-lucide="shield-check" class="w-3.5 h-3.5 text-[#10B981]"></i> Verificado</span></div>
                     <h3 class="text-lg font-bold text-white mb-2 font-heading" data-i18n="step-2-title">Auditoría de Tradición Legal</h3>
                     <p class="text-slate-300 text-xs sm:text-sm leading-relaxed" data-i18n="step-2-desc">
                         Revisión documental en registros públicos para garantizar cero gravámenes o disputas de propiedad.
@@ -932,8 +945,8 @@
                 </div>
 
                 <!-- Step 3 -->
-                <div class="bg-[#0F223D] p-7 rounded-2xl border border-white/10 relative">
-                    <div class="w-10 h-10 rounded-full bg-[#D4AF37] text-[#0B172A] font-extrabold flex items-center justify-center text-sm mb-4 font-heading">03</div>
+                <div class="bg-[#16325B] p-7 rounded-2xl border border-white/10 relative">
+                    <div class="flex items-center justify-between mb-4"><div class="w-10 h-10 rounded-full bg-[#D4AF37] text-[#0F2444] font-extrabold flex items-center justify-center text-sm font-heading shadow-md">03</div><span class="inline-flex items-center gap-1 text-[11px] font-semibold text-[#10B981] bg-[#10B981]/15 border border-[#10B981]/30 px-2.5 py-0.5 rounded-full"><i data-lucide="shield-check" class="w-3.5 h-3.5 text-[#10B981]"></i> Verificado</span></div>
                     <h3 class="text-lg font-bold text-white mb-2 font-heading" data-i18n="step-3-title">Redacción de Contrato de Compraventa</h3>
                     <p class="text-slate-300 text-xs sm:text-sm leading-relaxed" data-i18n="step-3-desc">
                         Términos claros, esquemas de pago protegidos y gestión de poderes notariales si te encuentras fuera del país.
@@ -941,8 +954,8 @@
                 </div>
 
                 <!-- Step 4 -->
-                <div class="bg-[#0F223D] p-7 rounded-2xl border border-white/10 relative">
-                    <div class="w-10 h-10 rounded-full bg-[#D4AF37] text-[#0B172A] font-extrabold flex items-center justify-center text-sm mb-4 font-heading">04</div>
+                <div class="bg-[#16325B] p-7 rounded-2xl border border-white/10 relative">
+                    <div class="flex items-center justify-between mb-4"><div class="w-10 h-10 rounded-full bg-[#D4AF37] text-[#0F2444] font-extrabold flex items-center justify-center text-sm font-heading shadow-md">04</div><span class="inline-flex items-center gap-1 text-[11px] font-semibold text-[#10B981] bg-[#10B981]/15 border border-[#10B981]/30 px-2.5 py-0.5 rounded-full"><i data-lucide="shield-check" class="w-3.5 h-3.5 text-[#10B981]"></i> Verificado</span></div>
                     <h3 class="text-lg font-bold text-white mb-2 font-heading" data-i18n="step-4-title">Firma Registral y Entrega de Llaves</h3>
                     <p class="text-slate-300 text-xs sm:text-sm leading-relaxed" data-i18n="step-4-desc">
                         Protocolización oficial ante el Registro Público (SAREN) y entrega del documento debidamente registrado.
@@ -957,7 +970,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <span class="text-xs font-bold uppercase tracking-widest text-[#D4AF37]" data-i18n="contact-tag">Contacto Directo</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-[#0B172A] mt-2 font-heading" data-i18n="contact-title">Coordina tu Asesoría Personalizada</h2>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-[#0F2444] mt-2 font-heading" data-i18n="contact-title">Coordina tu Asesoría Personalizada</h2>
                 <div class="w-20 h-1 bg-[#D4AF37] mx-auto mt-4"></div>
                 <p class="text-slate-600 max-w-2xl mx-auto mt-4 text-sm sm:text-base font-normal" data-i18n="contact-subtitle">
                     Ya sea que desees invertir, vender o auditar legalmente un inmueble en Margarita, contáctate directamente con Heidy Castillo.
@@ -970,9 +983,9 @@
                 <div class="lg:col-span-5 space-y-8">
                     
                     <!-- Direct WhatsApp Card -->
-                    <div class="bg-[#0B172A] text-white p-7 rounded-2xl shadow-xl border border-[#D4AF37]/30">
+                    <div class="bg-[#0F2444] text-white p-7 rounded-2xl shadow-xl border border-[#D4AF37]/30">
                         <div class="flex items-center gap-4 mb-4">
-                            <div class="w-12 h-12 rounded-xl bg-[#25D366]/20 flex items-center justify-center text-[#25D366]">
+                            <div class="w-12 h-12 rounded-xl bg-[#10B981]/20 flex items-center justify-center text-[#10B981]">
                                 <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
                                 </svg>
@@ -994,49 +1007,49 @@
                         <!-- Phone with Copy -->
                         <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
                             <div class="flex items-center gap-3">
-                                <div class="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center text-[#0B172A]">
+                                <div class="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center text-[#0F2444]">
                                     <i data-lucide="phone" class="w-5 h-5"></i>
                                 </div>
                                 <div>
                                     <p class="text-xs text-slate-500 font-semibold uppercase" data-i18n="contact-phone-label">Teléfono</p>
-                                    <a href="tel:+584221624056" class="text-sm font-bold text-[#0B172A] hover:text-[#D4AF37] transition-colors">+58 422-1624056</a>
+                                    <a href="tel:+584221624056" class="text-sm font-bold text-[#0F2444] hover:text-[#D4AF37] transition-colors">+58 422-1624056</a>
                                 </div>
                             </div>
                             <div class="relative">
                                 <button onclick="copyToClipboard('+584221624056', this)" class="p-2 text-slate-400 hover:text-[#D4AF37] transition-colors rounded-md" title="Copy Phone Number">
                                     <i data-lucide="copy" class="w-4 h-4"></i>
                                 </button>
-                                <span class="copy-feedback opacity-0 pointer-events-none absolute right-0 top-full mt-1 bg-[#0B172A] text-white text-[10px] py-1 px-2 rounded shadow-lg whitespace-nowrap" data-i18n="copy-success">¡Copiado con éxito!</span>
+                                <span class="copy-feedback opacity-0 pointer-events-none absolute right-0 top-full mt-1 bg-[#0F2444] text-white text-[10px] py-1 px-2 rounded shadow-lg whitespace-nowrap" data-i18n="copy-success">¡Copiado con éxito!</span>
                             </div>
                         </div>
 
                         <!-- Email with Copy -->
                         <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
                             <div class="flex items-center gap-3">
-                                <div class="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center text-[#0B172A]">
+                                <div class="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center text-[#0F2444]">
                                     <i data-lucide="mail" class="w-5 h-5"></i>
                                 </div>
                                 <div>
                                     <p class="text-xs text-slate-500 font-semibold uppercase" data-i18n="contact-email-label">Correo Electrónico</p>
-                                    <a href="mailto:heicasti2302@gmail.com" class="text-sm font-bold text-[#0B172A] hover:text-[#D4AF37] transition-colors break-all">heicasti2302@gmail.com</a>
+                                    <a href="mailto:heicasti2302@gmail.com" class="text-sm font-bold text-[#0F2444] hover:text-[#D4AF37] transition-colors break-all">heicasti2302@gmail.com</a>
                                 </div>
                             </div>
                             <div class="relative">
                                 <button onclick="copyToClipboard('heicasti2302@gmail.com', this)" class="p-2 text-slate-400 hover:text-[#D4AF37] transition-colors rounded-md" title="Copy Email">
                                     <i data-lucide="copy" class="w-4 h-4"></i>
                                 </button>
-                                <span class="copy-feedback opacity-0 pointer-events-none absolute right-0 top-full mt-1 bg-[#0B172A] text-white text-[10px] py-1 px-2 rounded shadow-lg whitespace-nowrap" data-i18n="copy-success">¡Copiado con éxito!</span>
+                                <span class="copy-feedback opacity-0 pointer-events-none absolute right-0 top-full mt-1 bg-[#0F2444] text-white text-[10px] py-1 px-2 rounded shadow-lg whitespace-nowrap" data-i18n="copy-success">¡Copiado con éxito!</span>
                             </div>
                         </div>
 
                         <!-- Office Location -->
                         <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center text-[#0B172A]">
+                            <div class="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center text-[#0F2444]">
                                 <i data-lucide="map-pin" class="w-5 h-5"></i>
                             </div>
                             <div>
                                 <p class="text-xs text-slate-500 font-semibold uppercase" data-i18n="contact-loc-label">Ubicación & Cobertura</p>
-                                <p class="text-sm font-bold text-[#0B172A]">Pampatar • Isla de Margarita, Venezuela</p>
+                                <p class="text-sm font-bold text-[#0F2444]">Pampatar • Isla de Margarita, Venezuela</p>
                             </div>
                         </div>
 
@@ -1081,7 +1094,7 @@
                             <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent outline-none transition-all text-sm" placeholder="Cuéntanos sobre tus objetivos inmobiliarios, zona preferida o presupuesto..." data-i18n-ph="form-msg-ph"></textarea>
                         </div>
 
-                        <button type="submit" id="form-submit-btn" class="w-full bg-[#0B172A] hover:bg-[#D4AF37] hover:text-[#0B172A] text-white font-bold py-4 rounded-lg uppercase tracking-wider text-xs sm:text-sm transition-all shadow-md">
+                        <button type="submit" id="form-submit-btn" class="w-full bg-[#0F2444] hover:bg-[#D4AF37] hover:text-[#0F2444] text-white font-bold py-4 rounded-lg uppercase tracking-wider text-xs sm:text-sm transition-all shadow-md">
                             <span data-i18n="form-submit">Enviar Solicitud de Asesoría</span>
                         </button>
                         
@@ -1093,11 +1106,11 @@
                         <div class="w-16 h-16 rounded-full bg-[#D4AF37]/20 flex items-center justify-center text-[#D4AF37] mb-4">
                             <i data-lucide="check-circle" class="w-10 h-10"></i>
                         </div>
-                        <h3 class="text-2xl font-bold text-[#0B172A] font-heading mb-2" data-i18n="form-success-title">¡Mensaje Enviado!</h3>
+                        <h3 class="text-2xl font-bold text-[#0F2444] font-heading mb-2" data-i18n="form-success-title">¡Mensaje Enviado!</h3>
                         <p class="text-slate-600 text-sm max-w-md mb-6" data-i18n="form-success-desc">
                             Gracias por comunicarte. Heidy Castillo revisará tu solicitud y se pondrá en contacto contigo a la brevedad.
                         </p>
-                        <button onclick="resetContactForm()" class="bg-[#0B172A] text-white font-bold px-6 py-2.5 rounded-lg text-xs uppercase tracking-wider hover:bg-[#D4AF37] hover:text-[#0B172A] transition-colors" data-i18n="form-success-btn">
+                        <button onclick="resetContactForm()" class="bg-[#0F2444] text-white font-bold px-6 py-2.5 rounded-lg text-xs uppercase tracking-wider hover:bg-[#D4AF37] hover:text-[#0F2444] transition-colors" data-i18n="form-success-btn">
                             Enviar Otro Mensaje
                         </button>
                     </div>
@@ -1108,7 +1121,7 @@
     </section>
 
     <!-- 9. Footer -->
-    <footer class="bg-[#0B172A] text-slate-300 pt-16 pb-12 border-t border-[#D4AF37]/30">
+    <footer class="bg-[#0F2444] text-slate-300 pt-16 pb-12 border-t border-[#D4AF37]/30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-white/10">
                 
@@ -1142,10 +1155,10 @@
                     <p class="text-xs text-slate-400 mb-4">heicasti2302@gmail.com</p>
                     
                     <div class="flex items-center gap-3">
-                        <a href="https://wa.me/584221624056" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#25D366] hover:text-white transition-colors" title="WhatsApp">
+                        <a href="https://wa.me/584221624056" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#10B981] hover:text-white transition-colors" title="WhatsApp">
                             <svg viewBox="0 0 24 24" class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
                         </a>
-                        <a href="mailto:heicasti2302@gmail.com" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#D4AF37] hover:text-[#0B172A] transition-colors" title="Email">
+                        <a href="mailto:heicasti2302@gmail.com" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#D4AF37] hover:text-[#0F2444] transition-colors" title="Email">
                             <i data-lucide="mail" class="w-4 h-4"></i>
                         </a>
                     </div>
@@ -1162,14 +1175,14 @@
     </footer>
 
     <!-- Floating WhatsApp Button (Mobile Only Pulse) -->
-    <a href="https://wa.me/584221624056" id="wa-floating-btn" target="_blank" rel="noopener noreferrer" class="lg:hidden fixed bottom-5 left-5 z-50 p-3.5 bg-[#25D366] text-white rounded-full shadow-2xl hover:scale-110 active:scale-95 transition-transform animate-bounce" title="Chat on WhatsApp" aria-label="WhatsApp Direct Chat">
+    <a href="https://wa.me/584221624056" id="wa-floating-btn" target="_blank" rel="noopener noreferrer" class="lg:hidden fixed bottom-5 left-5 z-50 p-3.5 bg-[#10B981] hover:bg-[#059669] text-white rounded-full shadow-2xl hover:scale-110 active:scale-95 transition-transform animate-bounce" title="Chat on WhatsApp" aria-label="WhatsApp Direct Chat">
         <svg viewBox="0 0 24 24" class="w-7 h-7 fill-current" xmlns="http://www.w3.org/2000/svg">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
         </svg>
     </a>
 
     <!-- Floating Scroll-To-Top Button -->
-    <button id="scroll-top-btn" class="fixed bottom-5 right-5 z-50 p-3 bg-[#D4AF37] hover:bg-[#C59F2E] text-[#0B172A] rounded-full shadow-2xl transition-all duration-300 scroll-hidden" aria-label="Scroll to top">
+    <button id="scroll-top-btn" class="fixed bottom-5 right-5 z-50 p-3 bg-[#D4AF37] hover:bg-[#C59F2E] text-[#0F2444] rounded-full shadow-2xl transition-all duration-300 scroll-hidden" aria-label="Scroll to top">
         <i data-lucide="arrow-up" class="w-5 h-5"></i>
     </button>
 
@@ -1499,7 +1512,7 @@
             document.querySelectorAll('.mobile-lang-btn').forEach(btn => {
                 const isActive = btn.dataset.lang === currentLang;
                 btn.classList.toggle('bg-[#D4AF37]', isActive);
-                btn.classList.toggle('text-[#0B172A]', isActive);
+                btn.classList.toggle('text-[#0F2444]', isActive);
                 btn.classList.toggle('bg-white/10', !isActive);
                 btn.classList.toggle('text-white', !isActive);
             });
